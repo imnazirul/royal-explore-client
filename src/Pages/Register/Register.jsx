@@ -3,10 +3,12 @@ import { useForm } from "react-hook-form";
 import { Helmet } from "react-helmet-async";
 import { IoIosEye } from "react-icons/io";
 import { IoIosEyeOff } from "react-icons/io";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const { createUser, updateRegisterProfile } = useContext(AuthContext);
 
   const handleShowPassword = () => {
     setShowPassword(!showPassword);
@@ -21,6 +23,13 @@ const Register = () => {
 
   const handleRegister = (formData) => {
     const { email, fullName, password, photoUrl } = formData;
+
+    createUser(email, password)
+      .then((result) => {
+        console.log(result.user);
+        updateRegisterProfile(fullName, photoUrl);
+      })
+      .catch((err) => console.log(err));
   };
 
   return (
@@ -90,19 +99,6 @@ const Register = () => {
                   required: {
                     value: true,
                     message: "PhotoURL is a required Field",
-                  },
-                  validate: {
-                    isUrl: (value) => {
-                      if (
-                        /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w.-]*)*\/?$/.test(
-                          value
-                        )
-                      ) {
-                        return true;
-                      }
-
-                      return "Enter a Valid Url Address";
-                    },
                   },
                 })}
                 type="text"

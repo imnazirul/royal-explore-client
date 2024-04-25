@@ -2,9 +2,11 @@ import { Link, NavLink } from "react-router-dom";
 import { FiLogIn } from "react-icons/fi";
 import "./Navbar.css";
 import Logo from "./../../assets/logo.png";
+import { useContext } from "react";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Navbar = () => {
-  //   const handleSignOut = () => {};
+  const { user, loading, logOut } = useContext(AuthContext);
 
   const navLinks = (
     <>
@@ -13,16 +15,20 @@ const Navbar = () => {
           Home
         </NavLink>
       </span>{" "}
-      <span className="hover:text-[#3843D2]">
-        <NavLink className="px-4 py-2 rounded-lg" to="/login">
-          Login
-        </NavLink>
-      </span>
-      <span className="hover:text-[#3843D2]">
-        <NavLink className="px-4 py-2 rounded-lg" to="/register">
-          Register
-        </NavLink>
-      </span>{" "}
+      {!user && (
+        <>
+          <span className="hover:text-[#3843D2]">
+            <NavLink className="px-4 py-2 rounded-lg" to="/login">
+              Login
+            </NavLink>
+          </span>
+          <span className="hover:text-[#3843D2]">
+            <NavLink className="px-4 py-2 rounded-lg" to="/register">
+              Register
+            </NavLink>
+          </span>{" "}
+        </>
+      )}
       <span className="hover:text-[#3843D2]">
         <NavLink className="px-4 py-2 rounded-lg" to="/all_tourists_spot">
           All Tourists Spot
@@ -40,6 +46,12 @@ const Navbar = () => {
       </span>
     </>
   );
+
+  const handleSignOut = () => {
+    logOut()
+      .then((result) => console.log(result))
+      .catch((err) => console.log(err));
+  };
 
   return (
     <div className="navbar bg-base-100 font-poppins">
@@ -84,7 +96,7 @@ const Navbar = () => {
         </div>
       </div>
       <div className="navbar-end">
-        {/* {loading ? (
+        {loading ? (
           <>
             <span className="loading loading-spinner loading-md"></span>
           </>
@@ -124,13 +136,7 @@ const Navbar = () => {
           >
             <FiLogIn></FiLogIn>Sign In
           </Link>
-        )} */}
-        <Link
-          to="/login"
-          className="max-sm:btn-sm bg-green-1000 btn bg-[#8b3eea] text-[#FCFCFC] font-bold flex items-center gap-1 hover:bg-[#8b3eea]"
-        >
-          <FiLogIn></FiLogIn>Sign In
-        </Link>
+        )}
       </div>
     </div>
   );
