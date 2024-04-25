@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -33,30 +34,54 @@ const BannerSlider = () => {
               className="hero h-[210px] md:h-[300px] lg:h-[500px]"
               style={{
                 backgroundImage:
-                  "url(https://i.ibb.co/yhWVPRD/owen-lystrup-bo-Lgi-M0qwkg-unsplas.jpg)",
+                  "url(https://i.ibb.co/TLKQMWk/cameron-highland-malysia.jpg)",
               }}
             >
               <div className="hero-overlay bg-opacity-40"></div>
               <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-xl max-sm:space-y-1">
                   <h1
-                    className="lg:mb-5 text-xl lg:text-4xl font-bold md:text-2xl"
+                    className="lg:mb-5 text-xl lg:text-4xl font-bold md:text-2xl font-poppins"
                     data-aos="fade-down"
                     data-aos-duration="1000"
                   >
-                    Contemporary Charm
+                    Cameron Highland, Malaysia
                   </h1>
-                  <p
-                    className="md:mb-5 max-sm:text-sm"
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                  >
-                    Chic modern loft nestled in the heart of historic downtown,
-                    blending contemporary style with the charm of its heritage
-                    surroundings.
+                  <p className="md:mb-5 max-sm:text-sm font-poppins lg:text-lg">
+                    Explore the breathtaking Cameroon Highlands in Malaysia,
+                    where verdant tea plantations, cool temperatures, and lush
+                    landscapes create an idyllic retreat for nature lovers and
+                    adventure seekers alike.
+                  </p>
+                  <button className="max-sm:btn-sm btn bg-primary-1 border-0 text-white hover:text-black max-sm:mt-2 font-poppins">
+                    See Details
+                  </button>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            {" "}
+            <div
+              className="hero h-[210px] md:h-[300px] lg:h-[500px]"
+              style={{
+                backgroundImage: "url(https://i.ibb.co/DY8w15n/rangamati.jpg)",
+              }}
+            >
+              <div className="hero-overlay bg-opacity-40"></div>
+              <div className="hero-content text-center text-neutral-content">
+                <div className="max-w-xl max-sm:space-y-1">
+                  <h1 className="lg:mb-5 text-xl lg:text-4xl font-bold md:text-2xl font-poppins">
+                    Rangamati, Bangladesh
+                  </h1>
+                  <p className="md:mb-5 max-sm:text-sm font-poppins lg:text-lg">
+                    Discover Rangamati, Bangladesh: a serene hill district
+                    adorned with lush greenery, serene lakes, and indigenous
+                    culture. Explore tribal villages, cruise on Kaptai Lake, and
+                    embrace nature's tranquility.
                   </p>
                   <button
-                    className="max-sm:btn-sm btn bg-[#3B7197] border-0 text-white hover:text-black max-sm:mt-2"
+                    className="max-sm:btn-sm btn bg-primary-1 border-0 text-white hover:text-black max-sm:mt-2 font-poppins"
                     data-aos="zoom-in-down"
                     data-aos-delay="1000"
                   >
@@ -72,30 +97,23 @@ const BannerSlider = () => {
               className="hero h-[210px] md:h-[300px] lg:h-[500px]"
               style={{
                 backgroundImage:
-                  "url(https://i.ibb.co/yhWVPRD/owen-lystrup-bo-Lgi-M0qwkg-unsplas.jpg)",
+                  "url(https://i.ibb.co/cLtCFsn/bali-indonesia.jpg)",
               }}
             >
               <div className="hero-overlay bg-opacity-40"></div>
               <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-xl max-sm:space-y-1">
-                  <h1
-                    className="lg:mb-5 text-xl lg:text-4xl font-bold md:text-2xl"
-                    data-aos="fade-down"
-                    data-aos-duration="1000"
-                  >
-                    Contemporary Charm
+                  <h1 className="lg:mb-5 text-xl lg:text-4xl font-bold md:text-2xl font-poppins">
+                    Bali, Indonesia
                   </h1>
-                  <p
-                    className="md:mb-5 max-sm:text-sm"
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                  >
-                    Chic modern loft nestled in the heart of historic downtown,
-                    blending contemporary style with the charm of its heritage
-                    surroundings.
+                  <p className="md:mb-5 max-sm:text-sm font-poppins lg:text-lg">
+                    Bali, Indonesia: A tropical paradise famed for stunning
+                    beaches, vibrant culture, lush landscapes, and spiritual
+                    retreats. Discover ancient temples, indulge in exquisite
+                    cuisine, and embrace the warmth of Balinese hospitality.
                   </p>
                   <button
-                    className="max-sm:btn-sm btn bg-[#3B7197] border-0 text-white hover:text-black max-sm:mt-2"
+                    className="max-sm:btn-sm btn bg-primary-1 border-0 text-white hover:text-black max-sm:mt-2 font-poppins"
                     data-aos="zoom-in-down"
                     data-aos-delay="1000"
                   >
@@ -111,33 +129,22 @@ const BannerSlider = () => {
               className="hero h-[210px] md:h-[300px] lg:h-[500px]"
               style={{
                 backgroundImage:
-                  "url(https://i.ibb.co/yhWVPRD/owen-lystrup-bo-Lgi-M0qwkg-unsplas.jpg)",
+                  "url(https://i.ibb.co/w74GL2Z/kualalampur-malyasia.jpg)",
               }}
             >
               <div className="hero-overlay bg-opacity-40"></div>
               <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-xl max-sm:space-y-1">
-                  <h1
-                    className="lg:mb-5 text-xl lg:text-4xl font-bold md:text-2xl"
-                    data-aos="fade-down"
-                    data-aos-duration="1000"
-                  >
-                    Contemporary Charm
+                  <h1 className="lg:mb-5 text-xl lg:text-4xl font-bold md:text-2xl font-poppins">
+                    Kuala Lampur, Malaysia
                   </h1>
-                  <p
-                    className="md:mb-5 max-sm:text-sm"
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                  >
-                    Chic modern loft nestled in the heart of historic downtown,
-                    blending contemporary style with the charm of its heritage
-                    surroundings.
+                  <p className="md:mb-5 max-sm:text-sm font-poppins lg:text-lg">
+                    Kuala Lumpur, Malaysia's vibrant capital, boasts iconic
+                    landmarks like the Petronas Towers, diverse cuisine,
+                    bustling markets, and lush green spaces. Explore its rich
+                    cultural tapestry and modern skyline.
                   </p>
-                  <button
-                    className="max-sm:btn-sm btn bg-[#3B7197] border-0 text-white hover:text-black max-sm:mt-2"
-                    data-aos="zoom-in-down"
-                    data-aos-delay="1000"
-                  >
+                  <button className="max-sm:btn-sm btn bg-primary-1 border-0 text-white hover:text-black max-sm:mt-2 font-poppins">
                     See Details
                   </button>
                 </div>
@@ -149,70 +156,23 @@ const BannerSlider = () => {
             <div
               className="hero h-[210px] md:h-[300px] lg:h-[500px]"
               style={{
-                backgroundImage:
-                  "url(https://i.ibb.co/yhWVPRD/owen-lystrup-bo-Lgi-M0qwkg-unsplas.jpg)",
+                backgroundImage: "url(https://i.ibb.co/t4pd5Dy/bangkok.jpg)",
               }}
             >
               <div className="hero-overlay bg-opacity-40"></div>
               <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-xl max-sm:space-y-1">
-                  <h1
-                    className="lg:mb-5 text-xl lg:text-4xl font-bold md:text-2xl"
-                    data-aos="fade-down"
-                    data-aos-duration="1000"
-                  >
-                    Contemporary Charm
+                  <h1 className="lg:mb-5 text-xl lg:text-4xl font-bold md:text-2xl font-poppins">
+                    Bangkok, Thailand
                   </h1>
-                  <p
-                    className="md:mb-5 max-sm:text-sm"
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                  >
-                    Chic modern loft nestled in the heart of historic downtown,
-                    blending contemporary style with the charm of its heritage
-                    surroundings.
+                  <p className="md:mb-5 max-sm:text-sm font-poppins lg:text-lg">
+                    Discover Bangkok's vibrant street life, ornate temples, and
+                    bustling markets. Experience the fusion of tradition and
+                    modernity in Thailand's capital city, where every corner
+                    unveils a new adventure.
                   </p>
                   <button
-                    className="max-sm:btn-sm btn bg-[#3B7197] border-0 text-white hover:text-black max-sm:mt-2"
-                    data-aos="zoom-in-down"
-                    data-aos-delay="1000"
-                  >
-                    See Details
-                  </button>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            {" "}
-            <div
-              className="hero h-[210px] md:h-[300px] lg:h-[500px]"
-              style={{
-                backgroundImage:
-                  "url(https://i.ibb.co/yhWVPRD/owen-lystrup-bo-Lgi-M0qwkg-unsplas.jpg)",
-              }}
-            >
-              <div className="hero-overlay bg-opacity-40"></div>
-              <div className="hero-content text-center text-neutral-content">
-                <div className="max-w-xl max-sm:space-y-1">
-                  <h1
-                    className="lg:mb-5 text-xl lg:text-4xl font-bold md:text-2xl"
-                    data-aos="fade-down"
-                    data-aos-duration="1000"
-                  >
-                    Contemporary Charm
-                  </h1>
-                  <p
-                    className="md:mb-5 max-sm:text-sm"
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                  >
-                    Chic modern loft nestled in the heart of historic downtown,
-                    blending contemporary style with the charm of its heritage
-                    surroundings.
-                  </p>
-                  <button
-                    className="max-sm:btn-sm btn bg-[#3B7197] border-0 text-white hover:text-black max-sm:mt-2"
+                    className="max-sm:btn-sm btn bg-primary-1 border-0 text-white hover:text-black max-sm:mt-2 font-poppins"
                     data-aos="zoom-in-down"
                     data-aos-delay="1000"
                   >

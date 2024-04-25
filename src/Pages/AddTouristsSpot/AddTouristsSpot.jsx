@@ -1,4 +1,10 @@
+import { useContext } from "react";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
+
 const AddTouristsSpot = () => {
+  const { user } = useContext(AuthContext);
+  console.log(user);
+
   const handleAddSpot = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -12,8 +18,12 @@ const AddTouristsSpot = () => {
     const image = form.image.value;
     const total_visitors_per_year = form.total_visitors_per_year.value;
     const short_description = form.tourists_spot_name.value;
+    const user_email = user?.email;
+    const user_name = user?.displayName;
 
     const newTouristsSpot = {
+      user_email,
+      user_name,
       tourists_spot_name,
       country_name,
       location,
