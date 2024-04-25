@@ -8,7 +8,8 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const { createUser, updateRegisterProfile } = useContext(AuthContext);
+  const { createUser, updateRegisterProfile, setReload, reload } =
+    useContext(AuthContext);
 
   const handleShowPassword = () => {
     setShowPassword(!showPassword);
@@ -27,7 +28,12 @@ const Register = () => {
     createUser(email, password)
       .then((result) => {
         console.log(result.user);
-        updateRegisterProfile(fullName, photoUrl);
+        updateRegisterProfile(fullName, photoUrl)
+          .then((result) => {
+            setReload(!reload);
+            console.log(result.user);
+          })
+          .then((err) => console.log(err));
       })
       .catch((err) => console.log(err));
   };
@@ -35,7 +41,7 @@ const Register = () => {
   return (
     <div className="mb-5 lg:mb-10 lg:bg-base-200 rounded-xl">
       <Helmet>
-        <title>Sign Up | Green Valley</title>
+        <title>Sign Up | Royal Explore</title>
       </Helmet>
 
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-jost font-bold text-center pt-5 lg:pt-10 text-btn-1 ">

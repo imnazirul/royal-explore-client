@@ -29,21 +29,26 @@ const Navbar = () => {
           </span>{" "}
         </>
       )}
-      <span className="hover:text-[#3843D2]">
-        <NavLink className="px-4 py-2 rounded-lg" to="/all_tourists_spot">
-          All Tourists Spot
-        </NavLink>
-      </span>
-      <span className="hover:text-[#3843D2]">
-        <NavLink className="px-4 py-2 rounded-lg" to="/add_tourists_spot">
-          Add Tourists Spot
-        </NavLink>
-      </span>
-      <span className="hover:text-[#3843D2]">
-        <NavLink className="px-4 py-2 rounded-lg" to="/my_list">
-          My List
-        </NavLink>
-      </span>
+      {user && (
+        <>
+          {" "}
+          <span className="hover:text-[#3843D2]">
+            <NavLink className="px-4 py-2 rounded-lg" to="/all_tourists_spot">
+              All Tourists Spot
+            </NavLink>
+          </span>
+          <span className="hover:text-[#3843D2]">
+            <NavLink className="px-4 py-2 rounded-lg" to="/add_tourists_spot">
+              Add Tourists Spot
+            </NavLink>
+          </span>
+          <span className="hover:text-[#3843D2]">
+            <NavLink className="px-4 py-2 rounded-lg" to="/my_list">
+              My List
+            </NavLink>
+          </span>
+        </>
+      )}
     </>
   );
 
@@ -116,7 +121,7 @@ const Navbar = () => {
                   <div className="w-10 rounded-full">
                     <img
                       alt="Tailwind CSS Navbar component"
-                      src={user.photoURL}
+                      src={user?.photoURL}
                     />
                   </div>
                 </div>

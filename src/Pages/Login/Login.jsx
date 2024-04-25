@@ -1,14 +1,17 @@
+/* eslint-disable react/no-unescaped-entities */
 import GoogleButton from "react-google-button";
 import GithubButton from "react-github-login-button";
 import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { IoIosEye } from "react-icons/io";
 import { IoIosEyeOff } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const { signIn } = useContext(AuthContext);
 
   const handleShowPassword = () => {
     setShowPassword(!showPassword);
@@ -22,6 +25,10 @@ const Login = () => {
 
   const handleLogin = (formData) => {
     const { email, password } = formData;
+
+    signIn(email, password)
+      .then((result) => console.log(result.user))
+      .then((err) => console.log(err));
   };
 
   const handleGoogleLogin = () => {};
