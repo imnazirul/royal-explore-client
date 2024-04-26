@@ -11,7 +11,8 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const { signIn } = useContext(AuthContext);
+  const { signIn, signInWithGoogle, signInWithGithub } =
+    useContext(AuthContext);
 
   const handleShowPassword = () => {
     setShowPassword(!showPassword);
@@ -31,9 +32,17 @@ const Login = () => {
       .then((err) => console.log(err));
   };
 
-  const handleGoogleLogin = () => {};
+  const handleGoogleLogin = () => {
+    signInWithGoogle()
+      .then((result) => console.log(result))
+      .then((err) => console.log(err));
+  };
 
-  const handleGithubLogin = () => {};
+  const handleGithubLogin = () => {
+    signInWithGithub()
+      .then((result) => console.log(result))
+      .then((err) => console.log(err));
+  };
 
   return (
     <div className="mb-5 lg:mb-10 lg:bg-base-200 rounded-xl ">

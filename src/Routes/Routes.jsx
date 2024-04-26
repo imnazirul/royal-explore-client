@@ -7,6 +7,7 @@ import Register from "../Pages/Register/Register";
 import AllTouristsSpot from "../Pages/AllTouristsSpot/AllTouristsSpot";
 import AddTouristsSpot from "../Pages/AddTouristsSpot/AddTouristsSpot";
 import MySpotList from "../Pages/MySpotList/MySpotList";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -17,7 +18,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("/data.json"),
+        loader: () => fetch("/country.json"),
       },
       {
         path: "/login",
@@ -29,15 +30,27 @@ const router = createBrowserRouter([
       },
       {
         path: "/all_tourists_spot",
-        element: <AllTouristsSpot></AllTouristsSpot>,
+        element: (
+          <PrivateRoute>
+            <AllTouristsSpot></AllTouristsSpot>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/add_tourists_spot",
-        element: <AddTouristsSpot></AddTouristsSpot>,
+        element: (
+          <PrivateRoute>
+            <AddTouristsSpot></AddTouristsSpot>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/my_list",
-        element: <MySpotList></MySpotList>,
+        element: (
+          <PrivateRoute>
+            <MySpotList></MySpotList>
+          </PrivateRoute>
+        ),
       },
     ],
   },

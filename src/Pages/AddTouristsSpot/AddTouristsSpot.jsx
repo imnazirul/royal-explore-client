@@ -17,7 +17,7 @@ const AddTouristsSpot = () => {
     const travel_time = form.travel_time.value;
     const image = form.image.value;
     const total_visitors_per_year = form.total_visitors_per_year.value;
-    const short_description = form.tourists_spot_name.value;
+    const short_description = form.short_description.value;
     const user_email = user?.email;
     const user_name = user?.displayName;
 
@@ -35,7 +35,7 @@ const AddTouristsSpot = () => {
       short_description,
     };
 
-    fetch("http://localhost:5000/touristSpots", {
+    fetch("http://localhost:5000/touristspots", {
       method: "POST",
       headers: {
         "content-type": "application/json",

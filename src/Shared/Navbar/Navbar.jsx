@@ -107,7 +107,7 @@ const Navbar = () => {
           </>
         ) : user ? (
           <div className="flex items-center gap-1">
-            <Link to="/user_profile">
+            <a>
               {" "}
               <div
                 className="tooltip tooltip-info tooltip-left"
@@ -126,7 +126,7 @@ const Navbar = () => {
                   </div>
                 </div>
               </div>
-            </Link>
+            </a>
             <button
               onClick={handleSignOut}
               className="max-sm:btn-sm bg-green-1000 btn bg-primary-1 text-[#FCFCFC] font-bold flex items-center  gap-1 hover:bg-primary-1"

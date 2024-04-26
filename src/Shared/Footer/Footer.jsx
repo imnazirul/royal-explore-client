@@ -71,6 +71,22 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="hover:underline font-medium"
                 >
+                  Tourist Management
+                </a>
+              </li>
+              <li>
+                <a
+                  rel="noopener noreferrer"
+                  className="hover:underline font-medium"
+                >
+                  Tourist Spots
+                </a>
+              </li>
+              <li>
+                <a
+                  rel="noopener noreferrer"
+                  className="hover:underline font-medium"
+                >
                   About Us
                 </a>
               </li>
@@ -80,22 +96,6 @@ const Footer = () => {
                   className="hover:underline font-medium"
                 >
                   Contact
-                </a>
-              </li>
-              <li>
-                <a
-                  rel="noopener noreferrer"
-                  className="hover:underline font-medium"
-                >
-                  Real Estate
-                </a>
-              </li>
-              <li>
-                <a
-                  rel="noopener noreferrer"
-                  className="hover:underline font-medium"
-                >
-                  Property
                 </a>
               </li>
             </ul>

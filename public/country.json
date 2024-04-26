@@ -1,0 +1,32 @@
+[
+  {
+    "image": "https://i.ibb.co/vqMXd4m/bangladesh.jpg",
+    "name": "Bangladesh",
+    "description": "Bangladesh, officially known as the People's Republic of Bangladesh, is a country in South Asia. It is bordered by India to the west, north, and east, Myanmar to the southeast, and the Bay of Bengal to the south. The capital and largest city are Dhaka."
+  },
+  {
+    "image": "https://i.ibb.co/Jp3tzrH/thailand.jpg",
+    "name": "Thailand",
+    "description": "Thailand, officially the Kingdom of Thailand, is a country in Southeast Asia. It is known for its tropical beaches, opulent royal palaces, ancient ruins, and ornate temples displaying figures of Buddha. Bangkok, the capital, is a sprawling metropolis."
+  },
+  {
+    "image": "https://i.ibb.co/441HTJV/malaysia.jpg",
+    "name": "Indonesia",
+    "description": "Indonesia, officially the Republic of Indonesia, is a country in Southeast Asia and Oceania. It comprises 17,508 islands and is the world's largest island country. With over 267 million people, it is the world's fourth-most populous country and the most populous Muslim-majority country."
+  },
+  {
+    "image": "https://i.ibb.co/4SkvsSc/vietnam.jpg",
+    "name": "Malaysia",
+    "description": "Malaysia is a country located in Southeast Asia, known for its beaches, rainforests, and mix of Malay, Chinese, Indian, and European cultural influences. The capital, Kuala Lumpur, is home to colonial buildings, busy shopping districts such as Bukit Bintang, and skyscrapers such as the iconic, 451m-tall Petronas Twin Towers."
+  },
+  {
+    "image": "https://i.ibb.co/4SkvsSc/vietnam.jpg",
+    "name": "Vietnam",
+    "description": "Vietnam is a Southeast Asian country known for its beaches, rivers, Buddhist pagodas, and bustling cities. Hanoi, the capital, pays homage to the nation’s iconic Communist-era leader, Ho Chi Minh, via a huge marble mausoleum. Ho Chi Minh City (formerly Saigon) has French colonial landmarks, plus Vietnamese War history museums and the Cu Chi tunnels, used by Viet Cong soldiers."
+  },
+  {
+    "image": "https://i.ibb.co/ydVM66L/Flag-Cambodia.webp",
+    "name": "Cambodia",
+    "description": "Cambodia is a Southeast Asian nation whose landscape spans low-lying plains, the Mekong Delta, mountains, and Gulf of Thailand coastline. Phnom Penh, its capital, is home to the art deco Central Market, glittering Royal Palace, and the National Museum's historical and archaeological exhibits."
+  }
+]
