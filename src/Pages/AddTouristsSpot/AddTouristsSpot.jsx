@@ -50,9 +50,11 @@ const AddTouristsSpot = () => {
         if (data.insertedId) {
           Swal.fire({
             title: "Success!",
-            text: "Your Tourist Spot Has Been Added To Database",
+            text: "Tourist Spot data has been Added .",
             icon: "success",
           });
+
+          form.reset();
         }
       });
   };
