@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import {
   GithubAuthProvider,
   GoogleAuthProvider,
@@ -68,6 +69,7 @@ const AuthProvider = ({ children }) => {
   const authInfo = {
     createUser,
     loading,
+    setLoading,
     updateRegisterProfile,
     user,
     setReload,

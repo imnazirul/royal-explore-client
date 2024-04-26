@@ -6,13 +6,18 @@ import { useForm } from "react-hook-form";
 import { useContext, useState } from "react";
 import { IoIosEye } from "react-icons/io";
 import { IoIosEyeOff } from "react-icons/io";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import toast from "react-hot-toast";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const { signIn, signInWithGoogle, signInWithGithub } =
+  const { signIn, signInWithGoogle, signInWithGithub, setLoading } =
     useContext(AuthContext);
+  const navigate = useNavigate();
+
+  const location = useLocation();
+  console.log(location);
 
   const handleShowPassword = () => {
     setShowPassword(!showPassword);
@@ -28,20 +33,42 @@ const Login = () => {
     const { email, password } = formData;
 
     signIn(email, password)
-      .then((result) => console.log(result.user))
-      .catch((err) => console.log(err));
+      .then(() => {
+        toast.success("Sign In Successful");
+        navigate(location?.state ? location.state : "/");
+      })
+      .catch((err) => {
+        setLoading(false);
+        if (err.message === "Firebase: Error (auth/invalid-credential).") {
+          toast.error("Invalid Email Or Password");
+        } else {
+          toast.error("An Unknown Error Occurred");
+        }
+      });
   };
 
   const handleGoogleLogin = () => {
     signInWithGoogle()
-      .then((result) => console.log(result))
-      .catch((err) => console.log(err));
+      .then(() => {
+        toast.success("Sign In Successful");
+        navigate(location?.state ? location.state : "/");
+      })
+      .catch(() => {
+        setLoading(false);
+        toast.error("An Unknown Error Occurred!");
+      });
   };
 
   const handleGithubLogin = () => {
     signInWithGithub()
-      .then((result) => console.log(result))
-      .catch((err) => console.log(err));
+      .then(() => {
+        toast.success("Sign In Successful");
+        navigate(location?.state ? location.state : "/");
+      })
+      .catch(() => {
+        setLoading(false);
+        toast.error("An Unknown Error Occurred!");
+      });
   };
 
   return (

@@ -1,15 +1,18 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { Helmet } from "react-helmet-async";
 import { IoIosEye } from "react-icons/io";
 import { IoIosEyeOff } from "react-icons/io";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import toast from "react-hot-toast";
 
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const { createUser, updateRegisterProfile, setReload, reload } =
+  const { createUser, updateRegisterProfile, setReload, reload, setLoading } =
     useContext(AuthContext);
+
+  const navigate = useNavigate();
 
   const handleShowPassword = () => {
     setShowPassword(!showPassword);
@@ -26,16 +29,22 @@ const Register = () => {
     const { email, fullName, password, photoUrl } = formData;
 
     createUser(email, password)
-      .then((result) => {
-        console.log(result.user);
+      .then(() => {
         updateRegisterProfile(fullName, photoUrl)
-          .then((result) => {
-            setReload(!reload);
-            console.log(result.user);
-          })
+          .then(() => {})
           .catch((err) => console.log(err));
+        setReload(!reload);
+        toast.success("Registration Successful.");
+        navigate("/");
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        setLoading(false);
+        if (err.message === "Firebase: Error (auth/email-already-in-use).") {
+          toast.error("Email Already In Use");
+        } else {
+          toast.error("An Unknown Error Occurred!");
+        }
+      });
   };
 
   return (

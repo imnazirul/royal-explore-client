@@ -24,7 +24,7 @@ const TouristSpotDetails = () => {
       </div>
     );
   }
-  console.log(spot);
+
   const {
     average_cost,
     country_name,

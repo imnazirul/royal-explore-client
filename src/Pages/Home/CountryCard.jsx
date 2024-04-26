@@ -1,10 +1,11 @@
+/* eslint-disable react/prop-types */
 import { useNavigate } from "react-router-dom";
 
 const CountryCard = ({ country }) => {
   const { name, description, image } = country;
   const navigate = useNavigate();
   const handleClick = (name) => {
-    navigate(`country/${name}`);
+    navigate(`spot_list/${name}`);
   };
 
   return (
