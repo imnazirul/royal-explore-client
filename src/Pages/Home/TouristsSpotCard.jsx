@@ -5,6 +5,7 @@ import { IoLocationSharp } from "react-icons/io5";
 
 const TouristsSpotCard = ({ data }) => {
   const {
+    _id,
     average_cost,
     country_name,
     image,
@@ -32,7 +33,7 @@ const TouristsSpotCard = ({ data }) => {
             Travel Time: {travel_time}
           </span>{" "}
           <span className="text-blue-600  inline-block font-bold text-2xl rounded-3xl">
-            {average_cost} $
+            Cost: {average_cost} $
           </span>
         </p>
         <h2 className="card-title text-2xl font-poppins text-blue-600">
@@ -58,7 +59,7 @@ const TouristsSpotCard = ({ data }) => {
         </p>
         <div className="card-actions justify-end">
           <Link
-            to={``}
+            to={`/tourist_spot_details/${_id}`}
             className="btn bg-primary-1 text-white hover:text-black"
           >
             View Details

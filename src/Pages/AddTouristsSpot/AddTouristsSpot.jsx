@@ -20,6 +20,7 @@ const AddTouristsSpot = () => {
     const short_description = form.short_description.value;
     const user_email = user?.email;
     const user_name = user?.displayName;
+    const long_description = form.long_description.value || "Not Available";
 
     const newTouristsSpot = {
       user_email,
@@ -33,6 +34,7 @@ const AddTouristsSpot = () => {
       image,
       total_visitors_per_year,
       short_description,
+      long_description,
     };
 
     fetch("http://localhost:5000/touristspots", {
@@ -158,17 +160,28 @@ const AddTouristsSpot = () => {
             className="w-full rounded-md input"
           />
         </div>
-        <div className="col-span-full">
+        <div className="">
           <label className="text-white" htmlFor="short_description">
             Short Description
           </label>
-          <input
+          <br />
+          <textarea
             name="short_description"
-            type="text"
             required
             placeholder="Short Description"
-            className="w-full rounded-md input"
-          />
+            className="textarea w-full textarea-bordered resize-none"
+          ></textarea>
+        </div>
+        <div className="">
+          <label className="text-white" htmlFor="short_description">
+            Long Description (Optional)
+          </label>
+          <br />
+          <textarea
+            name="long_description"
+            placeholder="Long Description (Optional)"
+            className="textarea w-full textarea-bordered resize-none"
+          ></textarea>
         </div>
 
         <button className="btn bg-primary-1 hover:bg-primary-1 text-white font-poppins text-lg md:col-span-2">

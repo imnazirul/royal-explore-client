@@ -1,4 +1,3 @@
-import { useLoaderData } from "react-router-dom";
 import BannerSlider from "./BannerSlider";
 import TouristsSpotCard from "./TouristsSpotCard";
 import { useEffect, useState } from "react";
@@ -8,20 +7,34 @@ import Blogs from "./Blogs";
 
 const Home = () => {
   const [data, setData] = useState([]);
-  const loadedData = useLoaderData();
-  const [blogs, setblogs] = useState([]);
+  const [countries, setCountries] = useState([]);
+  const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/touristspots")
+    //tourist spot data fetch
+    fetch(`http://localhost:5000/touristspots`)
       .then((res) => res.json())
-      .then((data) => setData(data));
+      .then((data) => {
+        if (data.length > 9) {
+          const newData = data.slice(0, 9);
+          setData(newData);
+        } else {
+          setData(data);
+        }
+      });
 
-    fetch("/blog.json")
+    //country data fetch
+    fetch("http://localhost:5000/countries")
       .then((res) => res.json())
-      .then((data) => setblogs(data));
+      .then((data) => setCountries(data));
+
+    //blogs data fetch
+    fetch("http://localhost:5000/blogs")
+      .then((res) => res.json())
+      .then((data) => setBlogs(data));
   }, []);
 
-  console.log(loadedData);
+  console.log(countries);
 
   return (
     <div>
@@ -55,8 +68,8 @@ const Home = () => {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 grid-flow-row gap-3 lg:gap-6">
-          {loadedData.map((data, idx) => (
-            <CountryCard country={data} key={idx}></CountryCard>
+          {countries.map((country) => (
+            <CountryCard country={country} key={country._id}></CountryCard>
           ))}
         </div>
       </div>
@@ -72,8 +85,8 @@ const Home = () => {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row gap-3 lg:gap-6">
-          {blogs.map((blog, idx) => (
-            <Blogs key={idx} blog={blog}></Blogs>
+          {blogs.map((blog) => (
+            <Blogs key={blog._id} blog={blog}></Blogs>
           ))}
         </div>
       </div>

@@ -29,19 +29,19 @@ const Login = () => {
 
     signIn(email, password)
       .then((result) => console.log(result.user))
-      .then((err) => console.log(err));
+      .catch((err) => console.log(err));
   };
 
   const handleGoogleLogin = () => {
     signInWithGoogle()
       .then((result) => console.log(result))
-      .then((err) => console.log(err));
+      .catch((err) => console.log(err));
   };
 
   const handleGithubLogin = () => {
     signInWithGithub()
       .then((result) => console.log(result))
-      .then((err) => console.log(err));
+      .catch((err) => console.log(err));
   };
 
   return (

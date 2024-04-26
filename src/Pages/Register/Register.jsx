@@ -33,7 +33,7 @@ const Register = () => {
             setReload(!reload);
             console.log(result.user);
           })
-          .then((err) => console.log(err));
+          .catch((err) => console.log(err));
       })
       .catch((err) => console.log(err));
   };
