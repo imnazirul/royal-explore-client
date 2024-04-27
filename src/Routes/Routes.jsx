@@ -10,6 +10,7 @@ import MySpotList from "../Pages/MySpotList/MySpotList";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import TouristSpotDetails from "../Pages/TouristSpotDetails/TouristSpotDetails";
 import CountrySpots from "../Pages/CountrySpots/CountrySpots";
+import UpdateSpot from "../Pages/MySpotList/UpdateSpot/UpdateSpot";
 
 const router = createBrowserRouter([
   {
@@ -61,6 +62,14 @@ const router = createBrowserRouter([
       {
         path: "/spot_list/:country",
         element: <CountrySpots></CountrySpots>,
+      },
+      {
+        path: "/my_list/update_spot/:id",
+        element: (
+          <PrivateRoute>
+            <UpdateSpot></UpdateSpot>
+          </PrivateRoute>
+        ),
       },
     ],
   },

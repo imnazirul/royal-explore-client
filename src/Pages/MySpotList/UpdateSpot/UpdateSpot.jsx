@@ -1,11 +1,44 @@
-import { useContext } from "react";
-import { AuthContext } from "../../AuthProvider/AuthProvider";
-import Swal from "sweetalert2";
+import { useContext, useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { AuthContext } from "../../../AuthProvider/AuthProvider";
 
-const AddTouristsSpot = () => {
+const UpdateSpot = () => {
+  const { id } = useParams();
   const { user } = useContext(AuthContext);
+  const [spot, setSpot] = useState(null);
 
-  const handleAddSpot = (e) => {
+  console.log(id);
+
+  useEffect(() => {
+    fetch(`http://localhost:5000/touristspot/${id}`)
+      .then((res) => res.json())
+      .then((data) => setSpot(data));
+  }, []);
+
+  if (!spot) {
+    return (
+      <div className="flex h-[70vh] justify-center items-center">
+        <div className="h-20 w-20 md:w-24 md:h-24 border-[6px] md:border-[8px] border-dashed rounded-full animate-spin border-primary-1"></div>
+      </div>
+    );
+  }
+
+  const {
+    average_cost,
+    country_name,
+    image,
+    location,
+    seasonality,
+    short_description,
+    total_visitors_per_year,
+    tourists_spot_name,
+    travel_time,
+    long_description,
+    user_email,
+    user_name,
+  } = spot;
+
+  const handleUpdateSpot = (e) => {
     e.preventDefault();
     const form = e.target;
 
@@ -37,34 +70,19 @@ const AddTouristsSpot = () => {
       long_description,
     };
 
-    fetch("http://localhost:5000/touristspots", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(newTouristsSpot),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.insertedId) {
-          Swal.fire({
-            title: "Success!",
-            text: "Tourist Spot data has been Added .",
-            icon: "success",
-          });
-
-          form.reset();
-        }
-      });
+    console.log(newTouristsSpot);
   };
 
   return (
-    <div className="p-6 container font-poppins bg-[#7c85ef] mx-auto rounded-lg">
-      <h1 className="text-2xl lg:text-4xl text-center font-bold mb-5 font-poppins ">
-        Add Tourists Spots
+    <div className="font-poppins mt-4 bg-blue-300 p-4 rounded-xl">
+      <h1 className="text-2xl lg:text-4xl text-center font-bold mb-5  ">
+        <div className="underline mb-5 ">Update Tourist Spot Info</div>
+        <div className="text-purple-800">
+          {tourists_spot_name}, {country_name}
+        </div>
       </h1>
       <form
-        onSubmit={handleAddSpot}
+        onSubmit={handleUpdateSpot}
         className=" grid grid-cols-1 md:grid-cols-2 mx-auto gap-4 md:gap-8"
       >
         <div>
@@ -75,6 +93,7 @@ const AddTouristsSpot = () => {
             name="tourists_spot_name"
             type="text"
             required
+            defaultValue={tourists_spot_name}
             placeholder="Tourists Spot Name"
             className="w-full rounded-md input"
           />
@@ -88,6 +107,7 @@ const AddTouristsSpot = () => {
             name="country_name"
             type="text"
             required
+            defaultValue={country_name}
             placeholder="Country Name"
             className="w-full rounded-md input"
           />
@@ -101,6 +121,7 @@ const AddTouristsSpot = () => {
             name="location"
             type="text"
             required
+            defaultValue={location}
             placeholder="Location"
             className="w-full rounded-md input"
           />
@@ -114,6 +135,7 @@ const AddTouristsSpot = () => {
             name="average_cost"
             type="number"
             required
+            defaultValue={average_cost}
             placeholder="Average Cost"
             className="w-full rounded-md input"
           />
@@ -127,6 +149,7 @@ const AddTouristsSpot = () => {
             name="seasonality"
             type="text"
             required
+            defaultValue={seasonality}
             placeholder="Seasonality"
             className="w-full rounded-md input"
           />
@@ -140,6 +163,7 @@ const AddTouristsSpot = () => {
             name="travel_time"
             type="number"
             required
+            defaultValue={travel_time}
             placeholder="Travel Time(days)"
             className="w-full rounded-md input"
           />
@@ -153,6 +177,7 @@ const AddTouristsSpot = () => {
             name="image"
             type="text"
             required
+            defaultValue={image}
             placeholder="Photo URL"
             className="w-full rounded-md input"
           />
@@ -166,6 +191,7 @@ const AddTouristsSpot = () => {
             name="total_visitors_per_year"
             type="number"
             required
+            defaultValue={total_visitors_per_year}
             placeholder="Total Visitors Per Year"
             className="w-full rounded-md input"
           />
@@ -178,6 +204,7 @@ const AddTouristsSpot = () => {
           <textarea
             name="short_description"
             required
+            defaultValue={short_description}
             placeholder="Short Description"
             className="textarea w-full textarea-bordered resize-none"
           ></textarea>
@@ -190,16 +217,17 @@ const AddTouristsSpot = () => {
           <textarea
             name="long_description"
             placeholder="Long Description (Optional)"
+            defaultValue={long_description ? long_description : ""}
             className="textarea w-full textarea-bordered resize-none"
           ></textarea>
         </div>
 
         <button className="btn bg-primary-1 hover:bg-primary-1 text-white font-poppins text-lg md:col-span-2">
-          Add Spot
+          Update Spot
         </button>
       </form>
     </div>
   );
 };
 
-export default AddTouristsSpot;
+export default UpdateSpot;
