@@ -73,9 +73,9 @@ const TouristSpotDetails = () => {
         <p className="font-poppins text-2xl px-3 py-1 rounded-3xl bg-[#8b3eea33] text-primary-1 font-semibold inline-block mb-3">
           {tourists_spot_name}, {country_name}
         </p>
-        <p className="font-poppins text-3xl  text-primary-1 font-semibold text-center mb-3 flex flex-col">
+        <div className="font-poppins text-3xl  text-primary-1 font-semibold text-center mb-3 flex flex-col">
           {average_cost} $<p className="overline text-xl"> Average Cost </p>
-        </p>
+        </div>
       </div>
       <p className="text-xl font-poppins text-primary-1 font-semibold mb-5">
         Travel Duration: {travel_time} days

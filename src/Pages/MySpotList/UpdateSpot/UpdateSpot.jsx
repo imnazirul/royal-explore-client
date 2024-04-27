@@ -1,13 +1,14 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable no-unused-vars */
 import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { AuthContext } from "../../../AuthProvider/AuthProvider";
+import Swal from "sweetalert2";
 
 const UpdateSpot = () => {
   const { id } = useParams();
   const { user } = useContext(AuthContext);
   const [spot, setSpot] = useState(null);
-
-  console.log(id);
 
   useEffect(() => {
     fetch(`http://localhost:5000/touristspot/${id}`)
@@ -34,8 +35,6 @@ const UpdateSpot = () => {
     tourists_spot_name,
     travel_time,
     long_description,
-    user_email,
-    user_name,
   } = spot;
 
   const handleUpdateSpot = (e) => {
@@ -70,7 +69,29 @@ const UpdateSpot = () => {
       long_description,
     };
 
-    console.log(newTouristsSpot);
+    Swal.fire({
+      title: "Do you want to save the changes?",
+
+      showCancelButton: true,
+      confirmButtonText: "Update",
+    }).then((result) => {
+      /* Read more about isConfirmed, isDenied below */
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5000/touristspots/${id}`, {
+          method: "PUT",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(newTouristsSpot),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.modifiedCount > 0) {
+              Swal.fire("Updated!", "", "success");
+            }
+          });
+      }
+    });
   };
 
   return (
