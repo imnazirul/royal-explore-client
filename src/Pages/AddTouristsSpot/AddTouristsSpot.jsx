@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
+import { Typewriter } from "react-simple-typewriter";
 
 const AddTouristsSpot = () => {
   const { user } = useContext(AuthContext);
@@ -60,8 +61,8 @@ const AddTouristsSpot = () => {
 
   return (
     <div className="p-6 container font-poppins bg-[#7c85ef] mx-auto rounded-lg">
-      <h1 className="text-2xl lg:text-4xl text-center font-bold mb-5 font-poppins ">
-        Add Tourists Spots
+      <h1 className="text-2xl lg:text-4xl text-center font-bold mb-5 font-poppins text-white">
+        <Typewriter words={["Add Tourists Spots"]}></Typewriter>
       </h1>
       <form
         onSubmit={handleAddSpot}

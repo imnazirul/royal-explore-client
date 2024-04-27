@@ -14,9 +14,10 @@ const CountryCard = ({ country }) => {
       onClick={() => {
         handleClick(name);
       }}
-      className="card cursor-pointer font-poppins bg-base-100 overflow-hidden shadow-xl"
+      className="card border cursor-pointer font-poppins bg-base-100 overflow-hidden shadow-xl"
     >
       <div className="relative h-[180px]  md:h-[250px] lg:h-[300px]">
+        {" "}
         <img className="h-full w-full" src={image} alt="Shoes" />
         <h1
           style={{ transform: "translate(-50%,-50%)" }}

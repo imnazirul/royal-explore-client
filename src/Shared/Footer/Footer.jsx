@@ -16,7 +16,7 @@ const Footer = () => {
             </div>
           </Link>
 
-          <p className=" max-w-xs mt-3">
+          <p className=" max-w-xs mt-3 dark:text-gray-100">
             Explore our listings, discover your dream home, and start your
             journey towards a brighter future with us today.
           </p>

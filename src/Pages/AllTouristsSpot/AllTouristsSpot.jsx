@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import TouristsSpotCard from "../Home/TouristsSpotCard";
 import { IoIosArrowDown } from "react-icons/io";
+import { Typewriter } from "react-simple-typewriter";
+import SpotCard from "../../Shared/SpotCard/SpotCard";
 
 const AllTouristsSpot = () => {
   const [data, setData] = useState(null);
@@ -37,7 +38,7 @@ const AllTouristsSpot = () => {
   return (
     <div>
       <h1 className="text-2xl md:text-3xl lg:text-4xl text-center font-semibold font-poppins underline mb-4">
-        All Tourist Spots List
+        <Typewriter words={["All Tourist Spots List"]}></Typewriter>
       </h1>
 
       <div className="dropdown dropdown-bottom flex justify-center mb-3">
@@ -60,7 +61,7 @@ const AllTouristsSpot = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row gap-3 lg:gap-6">
         {data.map((sData) => (
-          <TouristsSpotCard key={sData._id} data={sData}></TouristsSpotCard>
+          <SpotCard key={sData._id} spot={sData}></SpotCard>
         ))}
       </div>
     </div>

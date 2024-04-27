@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import CountryCard from "./CountryCard";
 import ClientReviews from "./ClientReviews";
 import Blogs from "./Blogs";
+import { Slide } from "react-awesome-reveal";
+import { Typewriter } from "react-simple-typewriter";
 
 const Home = () => {
   const [data, setData] = useState(null);
@@ -39,16 +41,24 @@ const Home = () => {
       <BannerSlider></BannerSlider>
 
       <div className="mt-5 lg:mt-10 mb-5 lg:mb-10">
+        {" "}
         <h1 className="text-2xl md:text-3xl lg:text-4xl text-center font-semibold font-poppins">
-          Tourists Spots
+          <Typewriter
+            cursor={"|"}
+            loop={0}
+            words={["Tourists Spots", "Popular Destination"]}
+          >
+            {" "}
+          </Typewriter>
         </h1>
-        <p className="text-lg text-center max-w-3xl mx-auto mt-3 mb-4">
-          Explore breathtaking landscapes, rich culture, and historical
-          landmarks. From iconic monuments to hidden gems, our destination
-          offers unforgettable experiences for every traveler. Start your
-          adventure today!
-        </p>
-
+        <Slide direction="left" fraction={0} triggerOnce={true}>
+          <p className="text-lg text-center max-w-3xl mx-auto mt-3 mb-4">
+            Explore breathtaking landscapes, rich culture, and historical
+            landmarks. From iconic monuments to hidden gems, our destination
+            offers unforgettable experiences for every traveler. Start your
+            adventure today!
+          </p>
+        </Slide>
         {data ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row gap-3 lg:gap-6">
             {data.map((data, idx) => (
@@ -66,13 +76,18 @@ const Home = () => {
 
       <div className="mt-5 lg:mt-10 mb-5 lg:mb-10">
         <h1 className="text-2xl md:text-3xl lg:text-4xl text-center font-semibold font-poppins">
-          Countries
+          <Typewriter cursor={"|"} loop={0} words={["Countries"]}>
+            {" "}
+          </Typewriter>
         </h1>
-        <p className="text-lg text-center max-w-3xl mx-auto mt-3 mb-4">
-          Explore diverse cultures and landscapes across the globe. From the
-          iconic landmarks of France to the pristine beaches of Thailand,
-          discover your next adventure with our curated country guides.
-        </p>
+
+        <Slide direction="left" triggerOnce={true}>
+          <p className="text-lg text-center max-w-3xl mx-auto mt-3 mb-4">
+            Explore diverse cultures and landscapes across the globe. From the
+            iconic landmarks of France to the pristine beaches of Thailand,
+            discover your next adventure with our curated country guides.
+          </p>
+        </Slide>
 
         {countries ? (
           <div className="grid grid-cols-1 md:grid-cols-2 grid-flow-row gap-3 lg:gap-6">
@@ -91,14 +106,18 @@ const Home = () => {
 
       <div className="mt-5 lg:mt-10 mb-5 lg:mb-10">
         <h1 className="text-2xl md:text-3xl lg:text-4xl text-center font-semibold font-poppins">
-          Blogs And Articles
+          <Typewriter cursor={"|"} loop={0} words={["Blogs And Articles"]}>
+            {" "}
+          </Typewriter>
         </h1>
-        <p className="text-lg text-center max-w-3xl mx-auto mt-3 mb-4">
-          Explore our client reviews section for authentic testimonials on
-          unforgettable travel experiences. Discover why our clients trust us to
-          create their dream vacations.
-        </p>
 
+        <Slide direction="left" triggerOnce={true}>
+          <p className="text-lg text-center max-w-3xl mx-auto mt-3 mb-4">
+            Explore our client reviews section for authentic testimonials on
+            unforgettable travel experiences. Discover why our clients trust us
+            to create their dream vacations.
+          </p>
+        </Slide>
         {blogs ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row gap-3 lg:gap-6">
             {blogs.map((blog) => (
@@ -116,13 +135,22 @@ const Home = () => {
 
       <div className="mt-5 lg:mt-10 mb-5 lg:mb-10">
         <h1 className="text-2xl md:text-3xl lg:text-4xl text-center font-semibold font-poppins">
-          Our Client Words
+          <Typewriter
+            cursor={"|"}
+            loop={0}
+            words={["Our Client Words", "Our Client Reviews"]}
+          >
+            {" "}
+          </Typewriter>
         </h1>
-        <p className="text-lg text-center max-w-3xl mx-auto mt-3 mb-4">
-          Explore our client reviews section for authentic testimonials on
-          unforgettable travel experiences. Discover why our clients trust us to
-          create their dream vacations.
-        </p>
+
+        <Slide direction="left" triggerOnce={true}>
+          <p className="text-lg text-center max-w-3xl mx-auto mt-3 mb-4">
+            Explore our client reviews section for authentic testimonials on
+            unforgettable travel experiences. Discover why our clients trust us
+            to create their dream vacations.
+          </p>
+        </Slide>
         <div>
           <ClientReviews></ClientReviews>
         </div>

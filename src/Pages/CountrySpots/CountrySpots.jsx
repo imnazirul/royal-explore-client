@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import TouristsSpotCard from "../Home/TouristsSpotCard";
+import CountrySpotCard from "../../Shared/CountrySpotCard/CountrySpotCard";
 
 const CountrySpots = () => {
   const { country } = useParams();
@@ -20,7 +21,7 @@ const CountrySpots = () => {
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row gap-3 lg:gap-6">
         {countrySpotList.map((spot) => (
-          <TouristsSpotCard key={spot._id} data={spot}></TouristsSpotCard>
+          <CountrySpotCard key={spot._id} spot={spot}></CountrySpotCard>
         ))}
       </div>
     </div>
