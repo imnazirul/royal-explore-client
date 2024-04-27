@@ -31,6 +31,11 @@ const Navbar = () => {
           Home
         </NavLink>
       </span>{" "}
+      <span className="hover:text-[#3843D2]">
+        <NavLink className="px-4 py-2 rounded-lg" to="/all_tourists_spot">
+          All Tourists Spot
+        </NavLink>
+      </span>
       {!user && (
         <>
           <span className="hover:text-[#3843D2]">
@@ -48,11 +53,6 @@ const Navbar = () => {
       {user && (
         <>
           {" "}
-          <span className="hover:text-[#3843D2]">
-            <NavLink className="px-4 py-2 rounded-lg" to="/all_tourists_spot">
-              All Tourists Spot
-            </NavLink>
-          </span>
           <span className="hover:text-[#3843D2]">
             <NavLink className="px-4 py-2 rounded-lg" to="/add_tourists_spot">
               Add Tourists Spot
