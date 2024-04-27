@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import TouristsSpotCard from "../Home/TouristsSpotCard";
 import CountrySpotCard from "../../Shared/CountrySpotCard/CountrySpotCard";
 
 const CountrySpots = () => {

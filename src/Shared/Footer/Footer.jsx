@@ -16,17 +16,17 @@ const Footer = () => {
             </div>
           </Link>
 
-          <p className=" max-w-xs mt-3 dark:text-gray-100">
+          <div className=" max-w-xs mt-3 text-gray-900 ">
             Explore our listings, discover your dream home, and start your
             journey towards a brighter future with us today.
-          </p>
+          </div>
         </div>
         <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
           <div className="space-y-3">
             <h3 className="tracking-wide uppercase text-gray-900 font-jost font-semibold">
               Services
             </h3>
-            <ul className="space-y-1">
+            <ul className="space-y-1 text-gray-900 ">
               <li>
                 <a
                   rel="noopener noreferrer"
@@ -61,7 +61,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="space-y-3">
+          <div className="space-y-3 text-gray-900 ">
             <h3 className="tracking-wide uppercase text-gray-900 font-jost font-semibold">
               Quick Links
             </h3>
@@ -100,7 +100,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="space-y-3">
+          <div className="space-y-3 text-gray-900 ">
             <h3 className="uppercase text-gray-900 font-jost font-semibold">
               Legal
             </h3>
@@ -141,7 +141,7 @@ const Footer = () => {
                 href="https://facebook.com"
                 title="Facebook"
                 target="_blank"
-                className="flex items-center p-1"
+                className="flex text-gray-900  items-center p-1"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -157,7 +157,7 @@ const Footer = () => {
                 href="https://twitter.com"
                 title="Twitter"
                 target="_blank"
-                className="flex items-center p-1"
+                className="flex text-gray-900  items-center p-1"
               >
                 <svg
                   viewBox="0 0 24 24"
@@ -172,7 +172,7 @@ const Footer = () => {
                 href="https://instagram.com"
                 title="Instagram"
                 target="_blank"
-                className="flex items-center p-1"
+                className="flex text-gray-900  items-center p-1"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
