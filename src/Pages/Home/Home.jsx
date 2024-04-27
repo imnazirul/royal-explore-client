@@ -6,9 +6,9 @@ import ClientReviews from "./ClientReviews";
 import Blogs from "./Blogs";
 
 const Home = () => {
-  const [data, setData] = useState([]);
-  const [countries, setCountries] = useState([]);
-  const [blogs, setBlogs] = useState([]);
+  const [data, setData] = useState(null);
+  const [countries, setCountries] = useState(null);
+  const [blogs, setBlogs] = useState(null);
 
   useEffect(() => {
     //tourist spot data fetch
@@ -34,8 +34,6 @@ const Home = () => {
       .then((data) => setBlogs(data));
   }, []);
 
-  console.log(countries);
-
   return (
     <div>
       <BannerSlider></BannerSlider>
@@ -51,12 +49,21 @@ const Home = () => {
           adventure today!
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row gap-3 lg:gap-6">
-          {data.map((data, idx) => (
-            <TouristsSpotCard key={idx} data={data}></TouristsSpotCard>
-          ))}
-        </div>
+        {data ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row gap-3 lg:gap-6">
+            {data.map((data, idx) => (
+              <TouristsSpotCard key={idx} data={data}></TouristsSpotCard>
+            ))}
+          </div>
+        ) : (
+          <div className="flex items-center mx-auto justify-center space-x-2">
+            <div className="w-4 h-4 rounded-full animate-pulse dark:bg-violet-600"></div>
+            <div className="w-4 h-4 rounded-full animate-pulse dark:bg-violet-600"></div>
+            <div className="w-4 h-4 rounded-full animate-pulse dark:bg-violet-600"></div>
+          </div>
+        )}
       </div>
+
       <div className="mt-5 lg:mt-10 mb-5 lg:mb-10">
         <h1 className="text-2xl md:text-3xl lg:text-4xl text-center font-semibold font-poppins">
           Countries
@@ -67,11 +74,19 @@ const Home = () => {
           discover your next adventure with our curated country guides.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 grid-flow-row gap-3 lg:gap-6">
-          {countries.map((country) => (
-            <CountryCard country={country} key={country._id}></CountryCard>
-          ))}
-        </div>
+        {countries ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 grid-flow-row gap-3 lg:gap-6">
+            {countries.map((country) => (
+              <CountryCard country={country} key={country._id}></CountryCard>
+            ))}
+          </div>
+        ) : (
+          <div className="flex items-center mx-auto justify-center space-x-2">
+            <div className="w-4 h-4 rounded-full animate-pulse dark:bg-violet-600"></div>
+            <div className="w-4 h-4 rounded-full animate-pulse dark:bg-violet-600"></div>
+            <div className="w-4 h-4 rounded-full animate-pulse dark:bg-violet-600"></div>
+          </div>
+        )}
       </div>
 
       <div className="mt-5 lg:mt-10 mb-5 lg:mb-10">
@@ -84,11 +99,19 @@ const Home = () => {
           create their dream vacations.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row gap-3 lg:gap-6">
-          {blogs.map((blog) => (
-            <Blogs key={blog._id} blog={blog}></Blogs>
-          ))}
-        </div>
+        {blogs ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row gap-3 lg:gap-6">
+            {blogs.map((blog) => (
+              <Blogs key={blog._id} blog={blog}></Blogs>
+            ))}
+          </div>
+        ) : (
+          <div className="flex items-center mx-auto justify-center space-x-2">
+            <div className="w-4 h-4 rounded-full animate-pulse dark:bg-violet-600"></div>
+            <div className="w-4 h-4 rounded-full animate-pulse dark:bg-violet-600"></div>
+            <div className="w-4 h-4 rounded-full animate-pulse dark:bg-violet-600"></div>
+          </div>
+        )}
       </div>
 
       <div className="mt-5 lg:mt-10 mb-5 lg:mb-10">

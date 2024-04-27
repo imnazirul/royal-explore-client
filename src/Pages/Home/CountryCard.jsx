@@ -2,8 +2,9 @@
 import { useNavigate } from "react-router-dom";
 
 const CountryCard = ({ country }) => {
-  const { name, description, image } = country;
   const navigate = useNavigate();
+  const { name, description, image } = country;
+
   const handleClick = (name) => {
     navigate(`spot_list/${name}`);
   };

@@ -15,8 +15,6 @@ const TouristsSpotCard = ({ data }) => {
     total_visitors_per_year,
     tourists_spot_name,
     travel_time,
-    user_email,
-    user_name,
   } = data;
 
   return (

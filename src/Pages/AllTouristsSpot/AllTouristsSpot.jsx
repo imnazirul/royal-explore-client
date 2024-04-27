@@ -3,7 +3,7 @@ import TouristsSpotCard from "../Home/TouristsSpotCard";
 import { IoIosArrowDown } from "react-icons/io";
 
 const AllTouristsSpot = () => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(null);
   const [filterName, SetFiterName] = useState("Filter By Cost");
 
   useEffect(() => {
@@ -11,6 +11,14 @@ const AllTouristsSpot = () => {
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);
+
+  if (!data) {
+    return (
+      <div className="flex h-[70vh] justify-center items-center">
+        <div className="h-20 w-20 md:w-24 md:h-24 border-[6px] md:border-[8px] border-dashed rounded-full animate-spin border-primary-1"></div>
+      </div>
+    );
+  }
 
   const handleFilterLTH = async () => {
     SetFiterName("Filtered Cost Low to Hight");

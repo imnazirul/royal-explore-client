@@ -4,6 +4,8 @@ import "./Navbar.css";
 import Logo from "./../../assets/logo.png";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { Tooltip } from "react-tooltip";
+import toast from "react-hot-toast";
 
 const Navbar = () => {
   const { user, loading, logOut } = useContext(AuthContext);
@@ -70,7 +72,9 @@ const Navbar = () => {
 
   const handleSignOut = () => {
     logOut()
-      .then((result) => console.log(result))
+      .then(() => {
+        toast.success("Log Out Successfully");
+      })
       .catch((err) => console.log(err));
   };
 
@@ -161,10 +165,9 @@ const Navbar = () => {
         ) : user ? (
           <div className="flex items-center gap-1">
             <a>
-              {" "}
               <div
-                className="tooltip tooltip-info tooltip-left"
-                data-tip={user.displayName && user.displayName}
+                data-tooltip-id="my-tooltip"
+                data-tooltip-content={user.displayName && user.displayName}
               >
                 <div
                   tabIndex={0}
@@ -178,6 +181,12 @@ const Navbar = () => {
                     />
                   </div>
                 </div>
+                <Tooltip
+                  style={{ backgroundColor: "#3843D2", borderRadius: "10px" }}
+                  className="z-50 "
+                  id="my-tooltip"
+                  place="left"
+                />
               </div>
             </a>
             <button

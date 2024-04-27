@@ -1,6 +1,7 @@
+/* eslint-disable react/prop-types */
 const Blogs = ({ blog }) => {
-  console.log(blog);
   const { heading, description, title, image } = blog;
+
   return (
     <div className=" font-poppins flex flex-col h-full justify-between  p-6 space-y-6 overflow-hidden rounded-lg shadow-md bg-gray-900 dark:bg-gray-50 text-gray-100 dark:text-gray-800">
       <div>
