@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import CountryCard from "./CountryCard";
 import ClientReviews from "./ClientReviews";
 import Blogs from "./Blogs";
-import { Slide } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 import { Typewriter } from "react-simple-typewriter";
 
 const Home = () => {
@@ -51,14 +51,14 @@ const Home = () => {
             {" "}
           </Typewriter>
         </h1>
-        <Slide direction="left" fraction={0} triggerOnce={true}>
+        <Fade fraction={0} direction="up">
           <p className="text-lg text-center max-w-3xl mx-auto mt-3 mb-4">
             Explore breathtaking landscapes, rich culture, and historical
             landmarks. From iconic monuments to hidden gems, our destination
             offers unforgettable experiences for every traveler. Start your
             adventure today!
           </p>
-        </Slide>
+        </Fade>
         {data ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row gap-3 lg:gap-6">
             {data.map((data, idx) => (
@@ -75,19 +75,18 @@ const Home = () => {
       </div>
 
       <div className="mt-5 lg:mt-10 mb-5 lg:mb-10">
-        <h1 className="text-2xl md:text-3xl lg:text-4xl text-center font-semibold font-poppins">
-          <Typewriter cursor={"|"} loop={0} words={["Countries"]}>
-            {" "}
-          </Typewriter>
-        </h1>
-
-        <Slide direction="left" triggerOnce={true}>
+        <Fade fraction={0} direction="down">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl text-center font-semibold font-poppins">
+            Countries
+          </h1>
+        </Fade>
+        <Fade fraction={0} direction="up">
           <p className="text-lg text-center max-w-3xl mx-auto mt-3 mb-4">
             Explore diverse cultures and landscapes across the globe. From the
             iconic landmarks of France to the pristine beaches of Thailand,
             discover your next adventure with our curated country guides.
           </p>
-        </Slide>
+        </Fade>
 
         {countries ? (
           <div className="grid grid-cols-1 md:grid-cols-2 grid-flow-row gap-3 lg:gap-6">
@@ -105,19 +104,19 @@ const Home = () => {
       </div>
 
       <div className="mt-5 lg:mt-10 mb-5 lg:mb-10">
-        <h1 className="text-2xl md:text-3xl lg:text-4xl text-center font-semibold font-poppins">
-          <Typewriter cursor={"|"} loop={0} words={["Blogs And Articles"]}>
-            {" "}
-          </Typewriter>
-        </h1>
+        <Fade fraction={0} direction="down">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl text-center font-semibold font-poppins">
+            Blogs And Articles
+          </h1>
+        </Fade>
 
-        <Slide direction="left" triggerOnce={true}>
+        <Fade fraction={0} direction="up">
           <p className="text-lg text-center max-w-3xl mx-auto mt-3 mb-4">
             Explore our client reviews section for authentic testimonials on
             unforgettable travel experiences. Discover why our clients trust us
             to create their dream vacations.
           </p>
-        </Slide>
+        </Fade>
         {blogs ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row gap-3 lg:gap-6">
             {blogs.map((blog) => (
@@ -143,14 +142,13 @@ const Home = () => {
             {" "}
           </Typewriter>
         </h1>
-
-        <Slide direction="left" triggerOnce={true}>
+        <Fade fraction={0} direction="up">
           <p className="text-lg text-center max-w-3xl mx-auto mt-3 mb-4">
             Explore our client reviews section for authentic testimonials on
             unforgettable travel experiences. Discover why our clients trust us
             to create their dream vacations.
           </p>
-        </Slide>
+        </Fade>
         <div>
           <ClientReviews></ClientReviews>
         </div>

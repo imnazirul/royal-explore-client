@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
-import { Typewriter } from "react-simple-typewriter";
 import SpotCard from "../../Shared/SpotCard/SpotCard";
 
 const AllTouristsSpot = () => {
   const [data, setData] = useState(null);
-  const [filterName, SetFiterName] = useState("Filter By Cost");
+  const [filterName, setFilterName] = useState("Filter By Cost");
 
   useEffect(() => {
     fetch("http://localhost:5000/touristspots")
@@ -22,14 +21,14 @@ const AllTouristsSpot = () => {
   }
 
   const handleFilterLTH = async () => {
-    SetFiterName("Filtered Cost Low to Hight");
+    setFilterName("Filtered Cost Low to Hight");
     const res = await fetch("http://localhost:5000/touristspotsad");
     const data = await res.json();
 
     setData(data);
   };
   const handleFilterHTL = async () => {
-    SetFiterName("Filtered Cost High to Low");
+    setFilterName("Filtered Cost High to Low");
     const res = await fetch("http://localhost:5000/touristspotsdd");
     const data = await res.json();
     setData(data);
@@ -38,7 +37,7 @@ const AllTouristsSpot = () => {
   return (
     <div>
       <h1 className="text-2xl md:text-3xl lg:text-4xl text-center font-semibold font-poppins underline mb-4">
-        <Typewriter words={["All Tourist Spots List"]}></Typewriter>
+        All Tourist Spots List
       </h1>
 
       <div className="dropdown dropdown-bottom flex justify-center mb-3">

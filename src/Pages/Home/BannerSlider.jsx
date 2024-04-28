@@ -9,7 +9,7 @@ import { Typewriter } from "react-simple-typewriter";
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import { Zoom, Slide } from "react-awesome-reveal";
+import { Zoom, Fade } from "react-awesome-reveal";
 
 const BannerSlider = () => {
   return (
@@ -48,13 +48,13 @@ const BannerSlider = () => {
                     ></Typewriter>
                   </h1>
 
-                  <Slide direction="up">
+                  <Fade direction="up">
                     <p className="md:mb-5 max-sm:text-sm font-poppins lg:text-lg dark:text-[#ffffffCC]">
                       Explore the breathtaking Cameroon Highlands in Malaysia,
                       where verdant tea plantations, cool temperatures, and
                       idyllic retreat for nature lovers.
                     </p>
-                  </Slide>
+                  </Fade>
                   <Zoom delay={200}>
                     <button className="max-sm:btn-sm btn bg-primary-1 border-0 text-white hover:text-black max-sm:mt-2 font-poppins">
                       See Details
@@ -82,13 +82,13 @@ const BannerSlider = () => {
                     ></Typewriter>
                   </h1>
 
-                  <Slide direction="up">
+                  <Fade direction="up">
                     <p className="md:mb-5 max-sm:text-sm font-poppins lg:text-lg dark:text-[#ffffffCC]">
                       Discover Rangamati, Bangladesh: a serene hill district
                       adorned with lush greenery, and indigenous culture.
                       Explore tribal villages, and embrace nature's tranquility.
                     </p>
-                  </Slide>
+                  </Fade>
 
                   <Zoom delay={200}>
                     <button className="max-sm:btn-sm btn bg-primary-1 border-0 text-white hover:text-black max-sm:mt-2 font-poppins">
@@ -118,14 +118,14 @@ const BannerSlider = () => {
                     ></Typewriter>
                   </h1>
 
-                  <Slide direction="up">
+                  <Fade direction="up">
                     <p className="md:mb-5 max-sm:text-sm font-poppins lg:text-lg dark:text-[#ffffffCC]">
                       Bali, Indonesia: A tropical paradise famed for stunning
                       beaches, vibrant culture, and spiritual retreats. Discover
                       ancient cuisine, and embrace the warmth of Balinese
                       hospitality.
                     </p>
-                  </Slide>
+                  </Fade>
                   <Zoom delay={200}>
                     <button className="max-sm:btn-sm btn bg-primary-1 border-0 text-white hover:text-black max-sm:mt-2 font-poppins">
                       See Details
@@ -154,13 +154,13 @@ const BannerSlider = () => {
                     ></Typewriter>
                   </h1>
 
-                  <Slide direction="up">
+                  <Fade direction="up">
                     <p className="md:mb-5 max-sm:text-sm font-poppins lg:text-lg dark:text-[#ffffffCC]">
                       Kuala Lumpur, Malaysia's vibrant capital, boasts iconic
                       landmarks like the Petronas Towers, and lush green spaces.
                       Explore its rich cultural tapestry and modern skyline.
                     </p>
-                  </Slide>
+                  </Fade>
                   <Zoom delay={200}>
                     <button className="max-sm:btn-sm btn bg-primary-1 border-0 text-white hover:text-black max-sm:mt-2 font-poppins">
                       See Details
@@ -188,7 +188,7 @@ const BannerSlider = () => {
                       words={["Bangkok, Thailand"]}
                     ></Typewriter>
                   </h1>
-                  <Slide direction="up">
+                  <Fade direction="up">
                     {" "}
                     <p className="md:mb-5 max-sm:text-sm font-poppins lg:text-lg dark:text-[#ffffffCC]">
                       Discover Bangkok's vibrant street life, ornate temples,
@@ -196,7 +196,7 @@ const BannerSlider = () => {
                       and capital city, where every corner unveils a new
                       adventure.
                     </p>
-                  </Slide>
+                  </Fade>
                   <Zoom delay={200}>
                     {" "}
                     <button className="max-sm:btn-sm btn bg-primary-1 border-0 text-white hover:text-black max-sm:mt-2 font-poppins">
