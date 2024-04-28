@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
 
 const CountryCard = ({ country }) => {
@@ -35,3 +35,7 @@ const CountryCard = ({ country }) => {
 };
 
 export default CountryCard;
+
+CountryCard.propTypes = {
+  country: PropTypes.object,
+};

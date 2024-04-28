@@ -1,4 +1,5 @@
-/* eslint-disable react/prop-types */
+import PropTypes from "prop-types";
+
 const Blogs = ({ blog }) => {
   const { heading, description, title, image } = blog;
 
@@ -74,3 +75,7 @@ const Blogs = ({ blog }) => {
 };
 
 export default Blogs;
+
+Blogs.propTypes = {
+  blog: PropTypes.object,
+};

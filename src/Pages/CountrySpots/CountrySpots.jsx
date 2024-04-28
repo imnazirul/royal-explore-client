@@ -18,10 +18,7 @@ const CountrySpots = () => {
       <h1 className="text-xl md:text-3xl lg:text-4xl text-center font-semibold font-poppins underline mb-4">
         All Tourist Spots of {country}
       </h1>
-      {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row gap-3 lg:gap-6"> */}
-      {/* {countrySpotList.map((spot) => (
-          <CountrySpotCard key={spot._id} spot={spot}></CountrySpotCard>
-        ))} */}
+
       {countrySpotList ? (
         <div className="grid grid-cols-1 md:grid-cols-2 grid-flow-row gap-3 lg:gap-6">
           {countrySpotList.map((spot) => (
@@ -33,7 +30,6 @@ const CountrySpots = () => {
           <div className="h-20 w-20 md:w-24 md:h-24 border-[6px] md:border-[8px] border-dashed rounded-full animate-spin border-primary-1"></div>
         </div>
       )}
-      {/* </div> */}
     </div>
   );
 };

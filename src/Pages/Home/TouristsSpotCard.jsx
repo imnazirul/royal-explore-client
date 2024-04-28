@@ -1,5 +1,4 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/prop-types */
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { IoLocationSharp } from "react-icons/io5";
 
@@ -69,3 +68,7 @@ const TouristsSpotCard = ({ data }) => {
 };
 
 export default TouristsSpotCard;
+
+TouristsSpotCard.propTypes = {
+  data: PropTypes.object,
+};

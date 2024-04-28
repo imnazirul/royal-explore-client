@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+import PropTypes from "prop-types";
 import { MdLocationOn } from "react-icons/md";
 import { Link } from "react-router-dom";
 
@@ -54,3 +54,7 @@ const CountrySpotCard = ({ spot }) => {
 };
 
 export default CountrySpotCard;
+
+CountrySpotCard.propTypes = {
+  spot: PropTypes.object,
+};

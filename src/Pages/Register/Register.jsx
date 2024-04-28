@@ -31,9 +31,11 @@ const Register = () => {
     createUser(email, password)
       .then(() => {
         updateRegisterProfile(fullName, photoUrl)
-          .then(() => {})
+          .then(() => {
+            setReload(!reload);
+          })
           .catch((err) => console.log(err));
-        setReload(!reload);
+
         toast.success("Registration Successful.");
         navigate("/");
       })

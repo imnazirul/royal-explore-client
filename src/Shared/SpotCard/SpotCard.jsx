@@ -1,13 +1,12 @@
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
-/* eslint-disable react/prop-types */
 const SpotCard = ({ spot }) => {
   const {
     _id,
     average_cost,
     country_name,
     image,
-
     seasonality,
     short_description,
     total_visitors_per_year,
@@ -64,3 +63,7 @@ const SpotCard = ({ spot }) => {
 };
 
 export default SpotCard;
+
+SpotCard.propTypes = {
+  spot: PropTypes.object,
+};

@@ -68,9 +68,11 @@ const TouristSpotDetails = () => {
           <p className="lg:text-xl">Twitter/X</p>
         </a>
       </div>
-
-      <div className="flex justify-between items-center">
-        <p className="font-poppins text-lg md:text-2xl px-3 py-1 rounded-3xl bg-[#8b3eea33] text-primary-1 font-semibold inline-block mb-3">
+      <p className="hidden max-sm:inline-block font-poppins text-lg md:text-2xl px-3 py-1 rounded-3xl bg-[#8b3eea33] text-primary-1 font-semibold  mb-3">
+        {tourists_spot_name}, {country_name}
+      </p>
+      <div className="flex justify-between items-start md:items-center ">
+        <p className="hidden md:inline-block font-poppins text-lg md:text-2xl px-3 py-1 rounded-3xl bg-[#8b3eea33] text-primary-1 font-semibold  mb-3">
           {tourists_spot_name}, {country_name}
         </p>
         <div className="font-poppins text-xl md:text-3xl  text-primary-1 font-semibold text-center mb-3 flex flex-col">

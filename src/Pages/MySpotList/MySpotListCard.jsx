@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
@@ -51,7 +51,6 @@ const MySpotListCard = ({ data }) => {
   return (
     <div className="overflow-x-auto font-poppins ">
       <table className="table">
-        {/* head */}
         <thead className="text-center bg-primary-1 text-white text-sm">
           <tr>
             <th>Index</th>
@@ -95,3 +94,7 @@ const MySpotListCard = ({ data }) => {
 };
 
 export default MySpotListCard;
+
+MySpotListCard.propTypes = {
+  data: PropTypes.array,
+};
