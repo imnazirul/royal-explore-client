@@ -26,7 +26,7 @@ const TouristsSpotCard = ({ data }) => {
         {country_name}
       </p>
       <div className="p-4 flex flex-col max-h-fit h-full justify-between">
-        <p className="flex flex-col lg:flex-row gap-2 lg:gap-0 justify-between">
+        <p className="flex items-start flex-col  gap-2 lg:gap-0 justify-between">
           <span className="text-primary-1 bg-[#8b3eea1A] inline-block px-3 md:py-1 md:font-semibold rounded-3xl">
             Travel Time: {travel_time} days
           </span>{" "}

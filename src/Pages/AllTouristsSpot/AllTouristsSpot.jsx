@@ -41,7 +41,11 @@ const AllTouristsSpot = () => {
       </h1>
 
       <div className="dropdown dropdown-bottom flex justify-center mb-3">
-        <div tabIndex={0} role="button" className="btn text-lg m-1 flex gap-2">
+        <div
+          tabIndex={0}
+          role="button"
+          className="max-sm:btn-sm btn md:text-lg m-1 flex gap-2"
+        >
           {filterName}
           <IoIosArrowDown></IoIosArrowDown>
         </div>

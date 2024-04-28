@@ -18,7 +18,7 @@ const Home = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.length > 9) {
-          const newData = data.slice(0, 9);
+          const newData = data.slice(0, 6);
           setData(newData);
         } else {
           setData(data);

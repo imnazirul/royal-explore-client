@@ -48,7 +48,7 @@ const TouristSpotDetails = () => {
       <div className="lg:h-[500px] rounded-lg overflow-hidden">
         <img className="h-full w-full" src={image} alt="" />
       </div>
-      <div className=" font-poppins text-lg md:text-2xl flex gap-5 justify-center my-2">
+      <div className=" font-poppins text-sm md:text-2xl flex gap-5 justify-center  my-2">
         <a className="flex  gap-1 items-center cursor-pointer">
           {" "}
           <IconContext.Provider value={{ color: "red" }}>
@@ -69,43 +69,44 @@ const TouristSpotDetails = () => {
         </a>
       </div>
 
-      <div className="flex justify-between items-start">
-        <p className="font-poppins text-2xl px-3 py-1 rounded-3xl bg-[#8b3eea33] text-primary-1 font-semibold inline-block mb-3">
+      <div className="flex justify-between items-center">
+        <p className="font-poppins text-lg md:text-2xl px-3 py-1 rounded-3xl bg-[#8b3eea33] text-primary-1 font-semibold inline-block mb-3">
           {tourists_spot_name}, {country_name}
         </p>
-        <div className="font-poppins text-3xl  text-primary-1 font-semibold text-center mb-3 flex flex-col">
-          {average_cost} $<p className="overline text-xl"> Average Cost </p>
+        <div className="font-poppins text-xl md:text-3xl  text-primary-1 font-semibold text-center mb-3 flex flex-col">
+          {average_cost} $
+          <p className="overline text-lg md:text-xl"> Average Cost </p>
         </div>
       </div>
-      <p className="text-xl font-poppins text-primary-1 font-semibold mb-5">
+      <p className="text-lg md:text-xl font-poppins text-primary-1 font-semibold mb-5">
         Travel Duration: {travel_time} days
       </p>
       <div>
-        <p className="font-poppins text-lg font-semibold">
-          <span className="text-lg md:text-xl text-btn-1  ">Added By: </span>
+        <p className="font-poppins md:text-lg font-semibold">
+          <span className=" md:text-xl  ">Added By: </span>
           {user_name}
         </p>
-        <p className="font-poppins text-lg font-semibold">
-          <span className="text-lg md:text-xl text-btn-1 ">Email: </span>
+        <p className="font-poppins md:text-lg font-semibold">
+          <span className=" md:text-xl ">Email: </span>
           {user_email}
         </p>
       </div>
       <hr className="my-4" />
       <div>
-        <p className="text-blue-600 font-poppins text-2xl font-semibold">
+        <p className="text-blue-600 font-poppins text-lg md:text-2xl font-semibold">
           Seasonality: {seasonality}
         </p>
-        <p className="text-lg md:text-xl">{short_description}</p>
+        <p className=" md:text-xl">{short_description}</p>
 
         <hr className="my-4" />
-        <h1 className="text-xl md:text-2xl flex gap-1 text-primary-1 items-center text-btn-1 font-bold my-2">
+        <h1 className="text-lg md:text-2xl flex gap-1 text-primary-1 items-center font-bold my-2">
           <FaLocationDot></FaLocationDot> {location}
         </h1>
 
-        <p className="text-xl mb-5 text-blue-600 font-semibold">
+        <p className="md:text-xl mb-2 md:mb-5 text-blue-600 font-semibold">
           Visitors Per Year: {total_visitors_per_year} People
         </p>
-        <p className="font-poppins text-lg">
+        <p className="font-poppins text-sm md:text-lg">
           <span className="text-blue-600 font-bold">Long Description: </span>
           {long_description}
         </p>

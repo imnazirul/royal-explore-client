@@ -97,7 +97,9 @@ const UpdateSpot = () => {
   return (
     <div className="font-poppins mt-4 bg-blue-300 p-4 rounded-xl">
       <h1 className="text-2xl lg:text-4xl text-center font-bold mb-5  ">
-        <div className="underline mb-5 ">Update Tourist Spot Info</div>
+        <div className="max-sm:text-xl underline mb-5 text-white">
+          Update Tourist Spot Info
+        </div>
         <div className="text-purple-800">
           {tourists_spot_name}, {country_name}
         </div>
