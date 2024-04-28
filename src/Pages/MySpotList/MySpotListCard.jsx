@@ -58,7 +58,7 @@ const MySpotListCard = ({ data }) => {
           <tr>
             <th>Index</th>
             <th>Spot Name</th>
-            <th>Location</th>
+            <th>Country</th>
             <th>Travel Time</th>
             <th>Average Cost</th>
             <th>Action</th>
@@ -71,7 +71,7 @@ const MySpotListCard = ({ data }) => {
             <tr key={spot._id}>
               <th>{index + 1}</th>
               <td>{spot.tourists_spot_name}</td>
-              <td>{spot.location}</td>
+              <td>{spot.country_name}</td>
               <td>{spot.travel_time} Days</td>
               <td>{spot.average_cost} $</td>
               <td className="flex gap-3 justify-center">
