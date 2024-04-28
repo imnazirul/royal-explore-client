@@ -109,8 +109,8 @@ const Navbar = () => {
           to="/"
           className="text-xl md:text-2xl btn-ghost font-jost flex gap-0 lg:text-2xl font-bold text-[#40008B]"
         >
-          <div className="flex items-center">
-            <img className="max-w-10" src={Logo} alt="" />
+          <div className="flex items-center max-sm:text-[16px]">
+            <img className="hidden md:flex max-w-10" src={Logo} alt="" />
             Royal Explore
           </div>
         </Link>
@@ -120,7 +120,7 @@ const Navbar = () => {
           {navLinks}
         </div>
       </div>
-      <div className="navbar-end flex gap-5 items-center">
+      <div className="navbar-end flex md:gap-5 items-center">
         {" "}
         <label className="cursor-pointer grid place-items-center">
           <input

@@ -51,8 +51,8 @@ const Home = () => {
             {" "}
           </Typewriter>
         </h1>
-        <Fade fraction={0} direction="up">
-          <p className="text-lg text-center max-w-3xl mx-auto mt-3 mb-4">
+        <Fade fraction={0} direction="up" triggerOnce={true}>
+          <p className="text-sm md:text-lg text-center max-w-3xl mx-auto mt-3 mb-4 font-poppins">
             Explore breathtaking landscapes, rich culture, and historical
             landmarks. From iconic monuments to hidden gems, our destination
             offers unforgettable experiences for every traveler. Start your
@@ -75,13 +75,13 @@ const Home = () => {
       </div>
 
       <div className="mt-5 lg:mt-10 mb-5 lg:mb-10">
-        <Fade fraction={0} direction="down">
+        <Fade fraction={0} direction="down" triggerOnce={true}>
           <h1 className="text-2xl md:text-3xl lg:text-4xl text-center font-semibold font-poppins">
             Countries
           </h1>
         </Fade>
-        <Fade fraction={0} direction="up">
-          <p className="text-lg text-center max-w-3xl mx-auto mt-3 mb-4">
+        <Fade fraction={0} direction="up" triggerOnce={true}>
+          <p className="text-sm md:text-lg text-center max-w-3xl mx-auto mt-3 mb-4 font-poppins">
             Explore diverse cultures and landscapes across the globe. From the
             iconic landmarks of France to the pristine beaches of Thailand,
             discover your next adventure with our curated country guides.
@@ -104,14 +104,14 @@ const Home = () => {
       </div>
 
       <div className="mt-5 lg:mt-10 mb-5 lg:mb-10">
-        <Fade fraction={0} direction="down">
+        <Fade fraction={0} direction="down" triggerOnce={true}>
           <h1 className="text-2xl md:text-3xl lg:text-4xl text-center font-semibold font-poppins">
             Blogs And Articles
           </h1>
         </Fade>
 
-        <Fade fraction={0} direction="up">
-          <p className="text-lg text-center max-w-3xl mx-auto mt-3 mb-4">
+        <Fade fraction={0} direction="up" triggerOnce={true}>
+          <p className="text-sm md:text-lg text-center max-w-3xl mx-auto mt-3 mb-4 font-poppins">
             Explore our client reviews section for authentic testimonials on
             unforgettable travel experiences. Discover why our clients trust us
             to create their dream vacations.
@@ -142,8 +142,8 @@ const Home = () => {
             {" "}
           </Typewriter>
         </h1>
-        <Fade fraction={0} direction="up">
-          <p className="text-lg text-center max-w-3xl mx-auto mt-3 mb-4">
+        <Fade fraction={0} direction="up" triggerOnce={true}>
+          <p className="text-sm md:text-lg text-center max-w-3xl mx-auto mt-3 mb-4 font-poppins">
             Explore our client reviews section for authentic testimonials on
             unforgettable travel experiences. Discover why our clients trust us
             to create their dream vacations.

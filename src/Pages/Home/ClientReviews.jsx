@@ -95,12 +95,12 @@ const ClientReviews = () => {
             <FaStar></FaStar>
             <FaRegStar></FaRegStar>
           </div>
-          <p className=" text-center my-2">
+          <p className="max-sm:text-sm text-center my-2">
             Incredible attention to detail! Every aspect of our trip was
             tailored to perfection. Highly recommend this agency for anyone
             seeking a personalized travel experience.
           </p>
-          <h1 className="text-2xl text-primary-1 font-bold text-center">
+          <h1 className="text-xl md:text-2xl text-primary-1 font-bold text-center">
             Michael P. Grimaldo
           </h1>
           <ul className="flex justify-center gap-3 text-2xl">
@@ -147,12 +147,12 @@ const ClientReviews = () => {
             <FaStar></FaStar>
             <FaRegStarHalfStroke></FaRegStarHalfStroke>
           </div>
-          <p className=" text-center my-2">
+          <p className="max-sm:text-sm text-center my-2">
             Exceeded all expectations! From start to finish, the team went above
             and beyond to ensure our vacation was flawless. Will definitely be
             booking with them again!
           </p>
-          <h1 className="text-2xl text-primary-1 font-bold text-center">
+          <h1 className="text-xl md:text-2xl text-primary-1 font-bold text-center">
             Sargam S. Singh
           </h1>
           <ul className="flex justify-center gap-3 text-2xl">
@@ -197,11 +197,11 @@ const ClientReviews = () => {
             <FaStar></FaStar>
             <FaRegStar></FaRegStar>
           </div>
-          <p className=" text-center my-2">
+          <p className="max-sm:text-sm text-center my-2">
             Exceptional service! The staff was knowledgeable, friendly, and
             always available to assist. Cant wait to plan our next getaway!
           </p>
-          <h1 className="text-2xl text-primary-1 font-bold text-center">
+          <h1 className="text-xl md:text-2xl text-primary-1 font-bold text-center">
             Harijeet M. Siller
           </h1>
           <ul className="flex justify-center gap-3 text-2xl">
@@ -246,12 +246,12 @@ const ClientReviews = () => {
             <FaStar></FaStar>
             <FaRegStar></FaRegStar>
           </div>
-          <p className=" text-center my-2">
+          <p className="max-sm:text-sm text-center my-2">
             From the moment we arrived until our departure, we felt like VIPs.
             Thank you for creating unforgettable memories that will last a
             lifetime.
           </p>
-          <h1 className="text-2xl text-primary-1 font-bold text-center">
+          <h1 className="text-xl md:text-2xl text-primary-1 font-bold text-center">
             Colin H. Renda
           </h1>
           <ul className="flex justify-center gap-3 text-2xl">
@@ -296,11 +296,11 @@ const ClientReviews = () => {
             <FaStar></FaStar>
             <FaRegStarHalfStroke></FaRegStarHalfStroke>
           </div>
-          <p className=" text-center my-2">
+          <p className="max-sm:text-sm text-center my-2">
             An unforgettable journey! From the breathtaking landscapes to the
             charming accommodations. Thank you for an unforgettable vacation!
           </p>
-          <h1 className="text-2xl text-primary-1 font-bold text-center">
+          <h1 className="text-xl md:text-2xl text-primary-1 font-bold text-center">
             Adam K. Jollio
           </h1>
           <ul className="flex justify-center gap-3 text-2xl">

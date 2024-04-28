@@ -5,14 +5,16 @@ const Blogs = ({ blog }) => {
   return (
     <div className=" font-poppins flex flex-col h-full justify-between  p-6 space-y-6 overflow-hidden rounded-lg shadow-md border">
       <div>
-        <h1 className="text-2xl text-blue-600 font-semibold mb-2">{heading}</h1>
+        <h1 className="text-lg md:text-2xl text-blue-600 font-semibold mb-2">
+          {heading}
+        </h1>
         <div className="relative h-[180px]  md:h-[200px] rounded-lg overflow-hidden mb-2">
           <img className="h-full w-full" src={image} alt="Shoes" />
         </div>
-        <h2 className="mb-2 text-xl font-semibold ">{title}</h2>
-        <p className=" text-gray-400 ">{description}</p>
+        <h2 className="mb-2 text-lg mg:text-xl font-semibold ">{title}</h2>
+        <p className="text-sm md:text-lg">{description}</p>
       </div>
-      <div className="flex flex-wrap  space-y-2 justify-between">
+      <div className="flex items-center flex-wrap  space-y-2 justify-between">
         <div className="space-x-2">
           <button
             aria-label="Share this post"
