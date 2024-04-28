@@ -21,7 +21,7 @@ const CountryCard = ({ country }) => {
         <img className="h-full w-full" src={image} alt="Shoes" />
         <h1
           style={{ transform: "translate(-50%,-50%)" }}
-          className="text-white font-bold font-poppins absolute text-4xl md:text-6xl top-1/2 left-1/2 drop-shadow-2xl "
+          className="text-white font-bold font-poppins absolute text-4xl md:text-5xl lg::text-6xl  top-1/2 left-1/2 drop-shadow-2xl "
         >
           {name}
         </h1>

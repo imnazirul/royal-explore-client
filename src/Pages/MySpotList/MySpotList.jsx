@@ -4,7 +4,7 @@ import MySpotListCard from "./MySpotListCard";
 
 const MySpotList = () => {
   const { user } = useContext(AuthContext);
-  const [data, setData] = useState([]);
+  const [data, setData] = useState();
 
   useEffect(() => {
     fetch(`http://localhost:5000/touristspots/${user.email}`)
@@ -20,7 +20,15 @@ const MySpotList = () => {
       </h1>
 
       <div>
-        <MySpotListCard data={data}></MySpotListCard>
+        {data ? (
+          <MySpotListCard data={data}></MySpotListCard>
+        ) : (
+          <div className="flex min-h-[70vh] items-center mx-auto justify-center space-x-2">
+            <div className="w-4 h-4 rounded-full animate-pulse dark:bg-violet-600"></div>
+            <div className="w-4 h-4 rounded-full animate-pulse dark:bg-violet-600"></div>
+            <div className="w-4 h-4 rounded-full animate-pulse dark:bg-violet-600"></div>
+          </div>
+        )}
       </div>
     </div>
   );

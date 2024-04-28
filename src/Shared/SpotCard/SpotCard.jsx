@@ -16,7 +16,7 @@ const SpotCard = ({ spot }) => {
   } = spot;
 
   return (
-    <div className="w-full max-w-sm overflow-hidden rounded-lg shadow-lg bg-primary-1 font-poppins">
+    <div className="w-full max-w-sm overflow-hidden rounded-lg shadow-lg bg-primary-1 font-poppins flex flex-col">
       <img
         className="object-cover object-center w-full h-40 md:h-56"
         src={image}
@@ -29,7 +29,7 @@ const SpotCard = ({ spot }) => {
         </h1>
       </div>
 
-      <div className="px-6 py-4">
+      <div className="px-5 py-4 w-full flex flex-col  justify-between flex-1">
         <h1 className="text-lg md:text-xl font-semibold text-blue-200">
           Average Cost: {average_cost} $
         </h1>
@@ -39,7 +39,7 @@ const SpotCard = ({ spot }) => {
 
         <p className="py-2 text-white max-sm:text-sm">{short_description}</p>
 
-        <div className="flex flex-col md:flex-row md:items-center justify-between md:mt-4 ">
+        <div className="flex flex-col md:flex-row md:items-center justify-between md:mt-4">
           {" "}
           <div className="mb-2">
             {" "}

@@ -14,7 +14,7 @@ const CountrySpotCard = ({ spot }) => {
   } = spot;
 
   return (
-    <div className="px-8 py-4 bg-primary-1 rounded-lg shadow-md  font-poppins">
+    <div className="px-8 py-4 bg-primary-1 rounded-lg shadow-md  font-poppins w-full flex flex-col justify-between">
       <div className="flex items-center justify-between">
         <p className="text-xl md:text-2xl font-semibold text-white ">
           {tourists_spot_name}

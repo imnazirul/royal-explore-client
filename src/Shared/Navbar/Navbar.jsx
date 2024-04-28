@@ -109,8 +109,8 @@ const Navbar = () => {
           to="/"
           className="text-xl md:text-2xl btn-ghost font-jost flex gap-0 lg:text-2xl font-bold text-[#40008B]"
         >
-          <div className="flex items-center max-sm:text-[10px]">
-            <img className="hidden md:flex" src={Logo} alt="" />
+          <div className="flex md:ml-2 md:gap-1 items-center max-sm:text-[10px]">
+            <img className="hidden max-w-10 md:flex" src={Logo} alt="" />
             Royal Explore
           </div>
         </Link>
