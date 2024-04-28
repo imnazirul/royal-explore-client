@@ -7,8 +7,6 @@ const PrivateRoute = ({ children }) => {
   const { user, loading } = useContext(AuthContext);
   const location = useLocation();
 
-  console.log(location);
-
   if (loading) {
     return (
       <div className="flex h-[70vh] justify-center items-center">

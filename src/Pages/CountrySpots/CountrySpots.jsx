@@ -1,13 +1,16 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import CountrySpotCard from "../../Shared/CountrySpotCard/CountrySpotCard";
+import { Helmet } from "react-helmet-async";
 
 const CountrySpots = () => {
   const { country } = useParams();
   const [countrySpotList, setCountrySpotList] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/country_spots/${country.toLocaleLowerCase()}`)
+    fetch(
+      `https://tourism-management-server-liart.vercel.app/country_spots/${country.toLocaleLowerCase()}`
+    )
       .then((res) => res.json())
       .then((data) => setCountrySpotList(data));
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -15,6 +18,9 @@ const CountrySpots = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>{country} Spots List | Royal Explore</title>
+      </Helmet>
       <h1 className="text-xl md:text-3xl lg:text-4xl text-center font-semibold font-poppins underline mb-4">
         All Tourist Spots of {country}
       </h1>

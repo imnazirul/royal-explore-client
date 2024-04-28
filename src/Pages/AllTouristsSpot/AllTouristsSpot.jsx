@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import SpotCard from "../../Shared/SpotCard/SpotCard";
+import { Helmet } from "react-helmet-async";
 
 const AllTouristsSpot = () => {
   const [data, setData] = useState(null);
   const [filterName, setFilterName] = useState("Filter By Cost");
 
   useEffect(() => {
-    fetch("http://localhost:5000/touristspots")
+    fetch("https://tourism-management-server-liart.vercel.app/touristspots")
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);
@@ -22,20 +23,27 @@ const AllTouristsSpot = () => {
 
   const handleFilterLTH = async () => {
     setFilterName("Filtered Cost Low to Hight");
-    const res = await fetch("http://localhost:5000/touristspotsad");
+    const res = await fetch(
+      "https://tourism-management-server-liart.vercel.app/touristspotsad"
+    );
     const data = await res.json();
 
     setData(data);
   };
   const handleFilterHTL = async () => {
     setFilterName("Filtered Cost High to Low");
-    const res = await fetch("http://localhost:5000/touristspotsdd");
+    const res = await fetch(
+      "https://tourism-management-server-liart.vercel.app/touristspotsdd"
+    );
     const data = await res.json();
     setData(data);
   };
 
   return (
     <div>
+      <Helmet>
+        <title>All Tourist Spot | Royal Explore</title>
+      </Helmet>
       <h1 className="text-2xl md:text-3xl lg:text-4xl text-center font-semibold font-poppins underline mb-4">
         All Tourist Spots List
       </h1>

@@ -1,13 +1,16 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import MySpotListCard from "./MySpotListCard";
+import { Helmet } from "react-helmet-async";
 
 const MySpotList = () => {
   const { user } = useContext(AuthContext);
   const [data, setData] = useState();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/touristspots/${user.email}`)
+    fetch(
+      `https://tourism-management-server-liart.vercel.app/touristspots/${user.email}`
+    )
       .then((res) => res.json())
       .then((data) => setData(data));
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -15,6 +18,9 @@ const MySpotList = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>My Spot List | Royal Explore</title>
+      </Helmet>
       <h1 className="text-2xl md:text-3xl lg:text-4xl text-center font-semibold font-poppins underline mb-4">
         My Tourist Spots List
       </h1>

@@ -6,6 +6,7 @@ import ClientReviews from "./ClientReviews";
 import Blogs from "./Blogs";
 import { Fade } from "react-awesome-reveal";
 import { Typewriter } from "react-simple-typewriter";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   const [data, setData] = useState(null);
@@ -14,10 +15,10 @@ const Home = () => {
 
   useEffect(() => {
     //tourist spot data fetch
-    fetch(`http://localhost:5000/touristspots`)
+    fetch(`https://tourism-management-server-liart.vercel.app/touristspots`)
       .then((res) => res.json())
       .then((data) => {
-        if (data.length > 9) {
+        if (data.length > 6) {
           const newData = data.slice(0, 6);
           setData(newData);
         } else {
@@ -26,18 +27,21 @@ const Home = () => {
       });
 
     //country data fetch
-    fetch("http://localhost:5000/countries")
+    fetch("https://tourism-management-server-liart.vercel.app/countries")
       .then((res) => res.json())
       .then((data) => setCountries(data));
 
     //blogs data fetch
-    fetch("http://localhost:5000/blogs")
+    fetch("https://tourism-management-server-liart.vercel.app/blogs")
       .then((res) => res.json())
       .then((data) => setBlogs(data));
   }, []);
 
   return (
     <div>
+      <Helmet>
+        <title>Home | Royal Explore</title>
+      </Helmet>
       <BannerSlider></BannerSlider>
 
       <div className="mt-5 lg:mt-10 mb-5 lg:mb-10">

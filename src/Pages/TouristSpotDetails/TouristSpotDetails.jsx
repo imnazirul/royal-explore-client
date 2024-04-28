@@ -5,13 +5,16 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 import { TiSocialYoutube } from "react-icons/ti";
 import { useParams } from "react-router-dom";
 import { FaLocationDot } from "react-icons/fa6";
+import { Helmet } from "react-helmet-async";
 
 const TouristSpotDetails = () => {
   const { id } = useParams();
   const [spot, setSpot] = useState();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/touristspot/${id}`)
+    fetch(
+      `https://tourism-management-server-liart.vercel.app/touristspot/${id}`
+    )
       .then((res) => res.json())
       .then((data) => setSpot(data));
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -42,6 +45,9 @@ const TouristSpotDetails = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Details -Tourist Spot | Royal Explore</title>
+      </Helmet>
       <h1 className="text-xl font-semibold md:text-3xl lg:text-4xl font-poppins underline text-darkBlue-1 text-center my-3">
         {tourists_spot_name}
       </h1>

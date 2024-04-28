@@ -24,9 +24,12 @@ const MySpotListCard = ({ data }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/touristspots/${id}`, {
-          method: "DELETE",
-        })
+        fetch(
+          `https://tourism-management-server-liart.vercel.app/touristspots/${id}`,
+          {
+            method: "DELETE",
+          }
+        )
           .then((res) => res.json())
           .then((result) => {
             if (result.deletedCount > 0) {

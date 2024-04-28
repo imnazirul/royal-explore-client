@@ -1,9 +1,13 @@
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 /* eslint-disable react/no-unescaped-entities */
 const ErrorEl = () => {
   return (
     <div className="text-black h-screen items-center flex justify-center gap-5 flex-col bg-gray-50 ">
+      <Helmet>
+        <title>Error | Royal Explore</title>
+      </Helmet>
       <section className="flex flex-col w-full justify-center items-center text-gray-800">
         <svg
           xmlns="http://www.w3.org/2000/svg"

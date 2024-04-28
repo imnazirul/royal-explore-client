@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
 import { Typewriter } from "react-simple-typewriter";
+import { Helmet } from "react-helmet-async";
 
 const AddTouristsSpot = () => {
   const { user } = useContext(AuthContext);
@@ -55,7 +56,7 @@ const AddTouristsSpot = () => {
       long_description,
     };
 
-    fetch("http://localhost:5000/touristspots", {
+    fetch("https://tourism-management-server-liart.vercel.app/touristspots", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -78,6 +79,9 @@ const AddTouristsSpot = () => {
 
   return (
     <div className="p-6 container font-poppins bg-[#7c85ef] mx-auto rounded-lg">
+      <Helmet>
+        <title>Add Tourist Spot | Royal Explore</title>
+      </Helmet>
       <h1 className="text-2xl lg:text-4xl text-center font-bold mb-5 font-poppins text-white">
         <Typewriter words={["Add Tourists Spots"]}></Typewriter>
       </h1>
@@ -124,14 +128,6 @@ const AddTouristsSpot = () => {
               {countryErr}
             </p>
           )}
-
-          {/* <input
-            name="country_name"
-            type="text"
-            required
-            placeholder="Country Name"
-            className="w-full rounded-md input"
-          /> */}
         </div>
 
         <div>

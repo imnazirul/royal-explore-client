@@ -4,6 +4,7 @@ import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { AuthContext } from "../../../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const UpdateSpot = () => {
   const { id } = useParams();
@@ -11,7 +12,9 @@ const UpdateSpot = () => {
   const [spot, setSpot] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/touristspot/${id}`)
+    fetch(
+      `https://tourism-management-server-liart.vercel.app/touristspot/${id}`
+    )
       .then((res) => res.json())
       .then((data) => setSpot(data));
   }, []);
@@ -77,13 +80,16 @@ const UpdateSpot = () => {
     }).then((result) => {
       /* Read more about isConfirmed, isDenied below */
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/touristspots/${id}`, {
-          method: "PUT",
-          headers: {
-            "content-type": "application/json",
-          },
-          body: JSON.stringify(newTouristsSpot),
-        })
+        fetch(
+          `https://tourism-management-server-liart.vercel.app/touristspots/${id}`,
+          {
+            method: "PUT",
+            headers: {
+              "content-type": "application/json",
+            },
+            body: JSON.stringify(newTouristsSpot),
+          }
+        )
           .then((res) => res.json())
           .then((data) => {
             if (data.modifiedCount > 0) {
@@ -96,6 +102,9 @@ const UpdateSpot = () => {
 
   return (
     <div className="font-poppins mt-4 bg-blue-300 p-4 rounded-xl">
+      <Helmet>
+        <title>Update Spot | Royal Explore</title>
+      </Helmet>
       <h1 className="text-2xl lg:text-4xl text-center font-bold mb-5  ">
         <div className="max-sm:text-xl underline mb-5 text-white">
           Update Tourist Spot Info

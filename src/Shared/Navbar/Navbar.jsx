@@ -120,7 +120,7 @@ const Navbar = () => {
           {navLinks}
         </div>
       </div>
-      <label className="ml-1 cursor-pointer grid place-items-center">
+      <label className="ml-1 md:ml-5 cursor-pointer grid place-items-center">
         <input
           onChange={handleToggle}
           type="checkbox"
