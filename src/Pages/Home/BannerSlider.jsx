@@ -43,8 +43,8 @@ const BannerSlider = () => {
                 <div className="max-w-xl max-sm:space-y-1">
                   <h1 className="lg:mb-5 text-xl lg:text-4xl font-bold md:text-2xl font-poppins       dark:text-[#ffffffCC]">
                     <Typewriter
-                      loop={0}
                       words={["Cameron Highland, Malaysia"]}
+                      typeSpeed={40}
                     ></Typewriter>
                   </h1>
 
@@ -76,10 +76,7 @@ const BannerSlider = () => {
               <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-xl max-sm:space-y-1">
                   <h1 className="lg:mb-5 text-xl lg:text-4xl font-bold md:text-2xl font-poppins dark:text-[#ffffffCC]">
-                    <Typewriter
-                      loop={0}
-                      words={["Rangamati, Bangladesh"]}
-                    ></Typewriter>
+                    Rangamati, Bangladesh
                   </h1>
 
                   <Fade direction="up">
@@ -112,10 +109,7 @@ const BannerSlider = () => {
               <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-xl max-sm:space-y-1">
                   <h1 className="lg:mb-5 text-xl lg:text-4xl font-bold md:text-2xl font-poppins dark:text-[#ffffffCC]">
-                    <Typewriter
-                      loop={0}
-                      words={["Bali, Indonesia"]}
-                    ></Typewriter>
+                    Bali, Indonesia
                   </h1>
 
                   <Fade direction="up">
@@ -148,10 +142,7 @@ const BannerSlider = () => {
               <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-xl max-sm:space-y-1">
                   <h1 className="lg:mb-5 text-xl lg:text-4xl font-bold md:text-2xl font-poppins dark:text-[#ffffffCC]">
-                    <Typewriter
-                      loop={0}
-                      words={["Kuala Lampur, Malaysia"]}
-                    ></Typewriter>
+                    Kuala Lampur, Malaysia
                   </h1>
 
                   <Fade direction="up">
@@ -183,10 +174,7 @@ const BannerSlider = () => {
                 <div className="max-w-xl max-sm:space-y-1">
                   {" "}
                   <h1 className="lg:mb-5 text-xl lg:text-4xl font-bold md:text-2xl font-poppins dark:text-[#ffffffCC]">
-                    <Typewriter
-                      loop={0}
-                      words={["Bangkok, Thailand"]}
-                    ></Typewriter>
+                    Bangkok, Thailand
                   </h1>
                   <Fade direction="up">
                     {" "}

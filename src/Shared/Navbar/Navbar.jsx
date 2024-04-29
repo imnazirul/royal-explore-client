@@ -85,7 +85,7 @@ const Navbar = () => {
           <div tabIndex={0} role="button" className=" btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
+              className="h-6 w-6"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -109,9 +109,10 @@ const Navbar = () => {
           to="/"
           className="text-xl md:text-2xl btn-ghost font-jost flex gap-0 lg:text-2xl font-bold text-[#40008B]"
         >
-          <div className="flex md:ml-2 md:gap-1 items-center max-sm:text-[10px]">
+          <div className="flex md:ml-2 md:gap-1 items-center max-sm:text-[13px]">
             <img className="hidden max-w-10 md:flex" src={Logo} alt="" />
-            Royal Explore
+            <span className="hidden md:flex">Royal Explore</span>
+            <span className="flex md:hidden overflow-hidden">RoyalExplore</span>
           </div>
         </Link>
       </div>

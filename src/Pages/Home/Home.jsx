@@ -70,7 +70,7 @@ const Home = () => {
             ))}
           </div>
         ) : (
-          <div className="flex my-5 md:my-10 items-center mx-auto justify-center space-x-2">
+          <div className="flex h-20 md:my-10 items-center mx-auto justify-center space-x-2">
             <div className="w-4 h-4 rounded-full animate-pulse dark:bg-violet-600"></div>
             <div className="w-4 h-4 rounded-full animate-pulse dark:bg-violet-600"></div>
             <div className="w-4 h-4 rounded-full animate-pulse dark:bg-violet-600"></div>
@@ -99,7 +99,7 @@ const Home = () => {
             ))}
           </div>
         ) : (
-          <div className="flex my-5 md:my-10 items-center mx-auto justify-center space-x-2">
+          <div className="flex h-20 md:my-10 items-center mx-auto justify-center space-x-2">
             <div className="w-4 h-4 rounded-full animate-pulse dark:bg-violet-600"></div>
             <div className="w-4 h-4 rounded-full animate-pulse dark:bg-violet-600"></div>
             <div className="w-4 h-4 rounded-full animate-pulse dark:bg-violet-600"></div>
@@ -128,7 +128,7 @@ const Home = () => {
             ))}
           </div>
         ) : (
-          <div className="flex my-5 md:my-10 items-center mx-auto justify-center space-x-2">
+          <div className="flex h-20 md:my-10 items-center mx-auto justify-center space-x-2">
             <div className="w-4 h-4 rounded-full animate-pulse dark:bg-violet-600"></div>
             <div className="w-4 h-4 rounded-full animate-pulse dark:bg-violet-600"></div>
             <div className="w-4 h-4 rounded-full animate-pulse dark:bg-violet-600"></div>
