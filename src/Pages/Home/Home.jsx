@@ -7,6 +7,7 @@ import Blogs from "./Blogs";
 import { Fade } from "react-awesome-reveal";
 import { Typewriter } from "react-simple-typewriter";
 import { Helmet } from "react-helmet-async";
+import Contact from "./Contact";
 
 const Home = () => {
   const [data, setData] = useState(null);
@@ -155,6 +156,23 @@ const Home = () => {
         </Fade>
         <div>
           <ClientReviews></ClientReviews>
+        </div>
+      </div>
+
+      <div className="mt-8 lg:mt-10 mb-5 lg:mb-10">
+        <Fade fraction={0} direction="down" triggerOnce={true}>
+          <h1 className="text-2xl md:text-3xl lg:text-4xl text-center font-semibold font-poppins">
+            How can we Help?
+          </h1>
+        </Fade>
+        <Fade fraction={0} direction="up" triggerOnce={true}>
+          <p className="text-sm md:text-lg text-center max-w-3xl mx-auto mt-3 mb-4 font-poppins">
+            Contact us and get strapped in for a better adventure experience in
+            your life-time. Just look for opportunity to be with nature.
+          </p>
+        </Fade>
+        <div>
+          <Contact></Contact>
         </div>
       </div>
     </div>
