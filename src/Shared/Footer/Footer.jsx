@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Logo from "./../../assets/logo.png";
 
 const Footer = () => {
@@ -6,19 +5,16 @@ const Footer = () => {
     <footer className="px-4 w-full divide-y bg-[#9b96cb] ">
       <div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
         <div className="lg:w-1/3">
-          <Link
-            to="/"
-            className="flex  space-x-3 lg:justify-start text-xl md:text-2xl  font-jost  gap-2 lg:text-2xl font-bold text-[#40008B]"
-          >
+          <div className="flex  space-x-3 lg:justify-start text-xl md:text-2xl  font-jost  gap-2 lg:text-2xl font-bold text-[#40008B]">
             <div className="flex items-center">
               <img className="max-w-10" src={Logo} alt="" />
               Royal Explore
             </div>
-          </Link>
+          </div>
 
           <div className=" max-w-xs mt-3 text-gray-900 ">
-            Explore our listings, discover your dream home, and start your
-            journey towards a brighter future with us today.
+            Explore, experience, and embark on unforgettable journeys with us.
+            Your gateway to exceptional adventures awaits. Discover more today!
           </div>
         </div>
         <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">

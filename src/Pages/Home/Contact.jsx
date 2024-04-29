@@ -8,7 +8,7 @@ const Contact = () => {
         <h1 className="text-2xl md:text-4xl text-center font-bold  ">
           Contact Us
         </h1>
-        <hr className="mt-3" />
+        <hr className="mt-3 max-lg:mb-3" />
         <div className="flex-1 lg:flex lg:items-center lg:-mx-6">
           <div className="lg:w-1/2  lg:mx-6">
             <h1 className="max-sm:text-xl md:text-2xl font-semibold capitalize lg:text-3xl">
@@ -90,26 +90,26 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="mt-8 w-full lg:w-1/2 lg:mx-6">
-            <div className="w-full px-2 lg:px-5 py-10 mx-auto overflow-hidden bg-white border rounded-xl lg:max-w-xl">
-              <form className="mt-4">
-                <div className="flex-1 mt-6">
-                  <label className="block mb-2 text-sm text-gray-600 ">
-                    Email address
-                  </label>
+          <div className="mt-5 w-full lg:w-1/2 lg:mx-6">
+            <div className="w-full px-2 lg:px-5 py-5 mx-auto overflow-hidden  border rounded-xl lg:max-w-xl">
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault();
+                }}
+              >
+                <div className="flex-1 ">
+                  <label className="block mb-2 text-sm ">Email address</label>
                   <input
                     type="email"
                     placeholder="Your Email"
-                    className=" block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
+                    className=" block w-full px-5 py-3 mt-2  border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
                   />
                 </div>
 
                 <div className="w-full mt-6">
-                  <label className="block mb-2 text-sm text-gray-600 ">
-                    Message
-                  </label>
+                  <label className="block mb-2 text-sm ">Message</label>
                   <textarea
-                    className="block w-full h-32 px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md md:h-48  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 resize-none focus:outline-none focus:ring"
+                    className="block w-full h-32 px-5 py-3 mt-2  placeholder-gray-400  border border-gray-200 rounded-md md:h-48  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 resize-none focus:outline-none focus:ring"
                     placeholder="Message"
                   ></textarea>
                 </div>
