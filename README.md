@@ -1,5 +1,3 @@
-## B9 A10 Type-01 Requirements
-
 # Royal Explore
 
 **Live Site URL:** [www.royalexplore.com](https://tourism-a10.web.app/)
